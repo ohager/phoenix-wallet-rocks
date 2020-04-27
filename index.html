@@ -1,44 +1,2093 @@
 <!DOCTYPE html>
+<!-- NextApp - App Landing Page Template design by Jthemes (http://www.jthemes.com) -->
+<!--[if lt IE 7 ]>
+<html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Burstcoin Phoenix Wallet</title>
-    <link rel="stylesheet" href="css/bulma.min.css" type="text/css"/>
-    <link rel="stylesheet" href="css/main.css" type="text/css"/>
-</head>
-<body>
-<a href="https://github.com/burst-apps-team/phoenix" class="github-corner" aria-label="View source on GitHub">
-    <svg width="80" height="80" viewBox="0 0 250 250"
-         style="fill:rgba(3, 155, 229, 0.90); color:#fff; position: absolute; top: 0; border: 0; left: 0; z-index: 2; transform: scale(-1, 1);"
-         aria-hidden="true">
-        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
-        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
-              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
-        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
-              fill="currentColor" class="octo-body"></path>
-    </svg>
-</a>
-<section class="hero is-dark is-fullheight">
-    <!-- Hero content: will be in the middle -->
-    <div class="hero-body">
-        <div class="container has-text-centered">
-            <img src="assets/sticker-burst-1.svg" alt="Phoenix Burst Wallet Logo" width="512">
-            <h1 class="title">
-                Phoenix Wallet
-            </h1>
-            <h2 class="subtitle">
-                A modern cross-platform wallet for Burstcoin
-            </h2>
-            <small>Under construction</small>
-        </div>
-    </div>
 
-    <!-- Hero footer: will stick at the bottom -->
-    <div class="hero-foot">
-        <div class="container has-text-centered">
-            Copyright, 2020 - Burst Apps Team (BAT)
-        </div>
-    </div>
-</section>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="author" content="JThemes"/>
+    <meta name="description" content="Phoenix - Cross-platform Wallet for Burstcoin"/>
+    <meta name="keywords"
+          content="Burstcoin, Mobile, Application, Wallet, Phoenix">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- SITE TITLE -->
+    <title>Phoenix - Cross-platform Wallet</title>
+
+    <!-- FAVICON AND TOUCH ICONS  -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700,900" rel="stylesheet">
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FONT ICONS -->
+    <link href="css/fontawesome.min.css" rel="stylesheet">
+    <link href="css/flaticon.css" rel="stylesheet">
+
+    <!-- PLUGINS STYLESHEET -->
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+
+    <!-- On Scroll Animations -->
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- TEMPLATE CSS -->
+    <link href="css/spinner.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- RESPONSIVE CSS -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+
+<!-- PRELOADER SPINNER
+============================================= -->
+<!--<div id="loader-wrapper">-->
+<!--    <div id="loader">-->
+<!--        <div class="cssload-spinner"></div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<!-- PAGE CONTENT
+============================================= -->
+<div id="page" class="page">
+
+
+    <!-- HEADER
+    ============================================= -->
+    <header id="header" class="header">
+        <nav class="navbar fixed-top navbar-expand-md hover-menu navbar-light bg-tra white-scroll">
+            <div class="container">
+
+
+                <!-- LOGO IMAGE -->
+                <!-- For Retina Ready displays take a image with double the amount of pixels that your image will be displayed (e.g 240 x 60 pixels) -->
+                <a href="#hero-19" class="navbar-brand logo-black"><img src="images/phoenix-burst-logo.svg"
+                                                                        height="60" alt="header-logo"></a>
+                <a href="#hero-19" class="navbar-brand logo-white"><img src="images/phoenix-burst-logo.svg"
+                                                                        height="60" alt="header-logo"></a>
+
+
+                <!-- Responsive Menu Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-bar-icon"><i class="fas fa-bars"></i></span>
+                </button>
+
+
+                <!-- Navigation Menu -->
+                <div id="navbarContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Dropdown Link -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="DropdownMenu" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">
+                                About
+                            </a>
+
+                            <!-- Dropdown Menu -->
+                            <ul class="dropdown-menu" aria-labelledby="DropdownMenu">
+                                <li><a class="dropdown-item" href="#info-12">About NextApp</a></li>
+                                <li><a class="dropdown-item" href="#info-10">Why NextApp</a></li>
+                                <li><a class="dropdown-item" href="#info-1">Best Solutions</a></li>
+                                <li><a class="dropdown-item" href="#reviews-1">Testimonials</a></li>
+                                <li><a class="dropdown-item" href="#more-apps">More Apps</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item nl-simple"><a class="nav-link" href="#features-2">Features</a></li>
+                        <li class="nav-item nl-simple"><a class="nav-link" href="#faqs-1">FAQs</a></li>
+                        <li class="nav-item nl-simple"><a class="nav-link" href="#blog-1">Blog</a></li>
+
+                        <!--                         AppStore Badge-->
+
+                    </ul>
+
+                    <!-- Header Button
+                    <span class="navbar-text white-color">
+                      <a href="#" class="btn btn-blue tra-hover">Get Early Access</a>
+                  </span>	-->
+
+                </div>    <!-- End Navigation Menu -->
+
+
+            </div>      <!-- End container -->
+        </nav>       <!-- End navbar -->
+    </header>    <!-- END HEADER -->
+
+
+    <!-- HERO-19
+    ============================================= -->
+    <section id="hero-19" class="bg-fixed hero-section division">
+        <div class="container">
+            <div class="row">
+
+
+                <!-- HERO TEXT -->
+                <div class="col-md-10 offset-md-1">
+                    <div class="hero-txt text-center">
+
+                        <!-- Video Preview -->
+                        <div class="video-preview">
+                            <a class="video-popup1" href="https://www.youtube.com/embed/SZEflIVnhH8" hidden>
+                                <!-- Change the link HERE!!! -->
+
+                                <!-- Play Icon -->
+                                <div class="video-btn play-icon-rose">
+                                    <div class="video-block-wrapper"><i class="fas fa-play"></i></div>
+                                </div>
+
+                                <!-- Preview Image -->
+
+                            </a>
+                            <img class="img-fluid" src="images/phoenix_crossplatform_small.png" alt="video-preview">
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="h3-sm">The ultimate <span>Burstcoin</span> crypto wallet</h3>
+
+                        <!-- Text -->
+                        <p class="p-lg">Feugiat primis ligula risus auctor augue egestas and mauris viverra tortor
+                            in iaculis magna undo ipsum mauris in placerat feugiat ligula risus auctor
+                        </p>
+
+                        <!-- Buttons Group -->
+                        <div class="btns-group">
+
+                            <!-- Buttons -->
+                            <a href="https://github.com/burst-apps-team/phoenix/releases/latest/download/linux-phoenix-burst-wallet.1.0.0-beta.14.deb"
+                               class="btn btn-download btn-white-outline-quad white-hover mr-10"><i class="fab fa-linux"></i>
+                                <div class="btn-download-text">
+                                    <small>Download for</small>
+                                    Linux
+                                </div>
+                            </a>
+                            <a href="https://github.com/burst-apps-team/phoenix/releases/latest/download/win-phoenix-burst-wallet-setup.1.0.0-beta.14.exe"
+                               class="btn btn-download btn-white-outline-quad white-hover mr-10"><i class="fab fa-microsoft"></i>
+                                <div class="btn-download-text">
+                                    <small>Download for</small>
+                                    Windows
+                                </div>
+                            </a>
+                            <a href="https://github.com/burst-apps-team/phoenix/releases/latest/download/mac-phoenix-burst-wallet.1.0.0-beta.14.dmg"
+                               class="btn btn-download btn-white-outline-quad white-hover"><i class="fab fa-apple"></i>
+                                <div class="btn-download-text">
+                                    <small>Download for</small>
+                                    Mac OS
+                                </div>
+                            </a>
+                            <!-- Text -->
+                        </div>
+                        <div class="btns-group">
+                            <a href="https://github.com/burst-apps-team/phoenix/releases/latest/download/win-phoenix-burst-wallet-setup.1.0.0-beta.14.exe"
+                               class="btn btn-download btn-white-outline-quad white-hover mr-10"><i class="fa fa-mobile-alt"></i>
+                                <div class="btn-download-text">
+                                    <small>Available on</small>
+                                    App Store
+                                </div>
+                            </a>
+                            <a href="https://github.com/burst-apps-team/phoenix/releases/latest/download/mac-phoenix-burst-wallet.1.0.0-beta.14.dmg"
+                               class="btn btn-download btn-white-outline-quad white-hover"><i class="fab fa-google-play"></i>
+                                <div class="btn-download-text">
+                                    <small>Get it on</small>
+                                    Google Play
+                                </div>
+                            </a>
+                        </div>
+                        <div class="btn-notice mt-20">
+                            <p class="p-sm">Latest release: NextApp 14.0.2, requires Mac OS X 10.8.5+</p>
+                            <p class="p-sm">Other versions available for <span><a href="#">older Macs.</a></span>
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>    <!-- END HERO TEXT -->
+
+
+            </div>       <!-- End row -->
+        </div>     <!-- End container -->
+    </section>    <!-- END HERO-19 -->
+
+
+    <!-- FEATURES-2
+    ============================================= -->
+    <section id="features-2" class="wide-60 features-section division">
+        <div class="container">
+            <div class="row">
+
+
+                <!-- FEATURE BOX #1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="fbox-2 icon-xs wow fadeInUp" data-wow-delay="0.3s">
+
+                        <!-- Icon  -->
+                        <span class="blue-color flaticon-004-tap"></span>
+
+                        <!-- Text -->
+                        <div class="fbox-2-txt">
+
+                            <!-- Title -->
+                            <h5 class="h5-sm">Friendly Interface</h5>
+
+                            <!-- Text -->
+                            <p>Porta semper lacus cursus, feugiat primis ultrice in ligula risus auctor
+                                tempus feugiat dolor impedit felis magna dolor vitae
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- FEATURE BOX #2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="fbox-2 icon-xs wow fadeInUp" data-wow-delay="0.5s">
+
+                        <!-- Icon  -->
+                        <span class="blue-color flaticon-090-settings-1"></span>
+
+                        <!-- Text -->
+                        <div class="fbox-2-txt">
+
+                            <!-- Title -->
+                            <h5 class="h5-sm">Powerful Options</h5>
+
+                            <!-- Text -->
+                            <p>Porta semper lacus cursus, feugiat primis ultrice in ligula risus auctor
+                                tempus feugiat dolor impedit felis magna dolor vitae
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- FEATURE BOX #3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="fbox-2 icon-xs wow fadeInUp" data-wow-delay="0.7s">
+
+                        <!-- Icon  -->
+                        <span class="blue-color flaticon-103-keyhole"></span>
+
+                        <!-- Text -->
+                        <div class="fbox-2-txt">
+
+                            <!-- Title -->
+                            <h5 class="h5-sm">Data Protection</h5>
+
+                            <!-- Text -->
+                            <p>Porta semper lacus cursus, feugiat primis ultrice in ligula risus auctor
+                                tempus feugiat dolor impedit felis magna dolor vitae
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- FEATURE BOX #4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="fbox-2 icon-xs wow fadeInUp" data-wow-delay="0.3s">
+
+                        <!-- Icon  -->
+                        <span class="blue-color flaticon-054-sim-card"></span>
+
+                        <!-- Text -->
+                        <div class="fbox-2-txt">
+
+                            <!-- Title -->
+                            <h5 class="h5-sm">Duplicate Finder</h5>
+
+                            <!-- Text -->
+                            <p>Porta semper lacus cursus, feugiat primis ultrice in ligula risus auctor
+                                tempus feugiat dolor impedit felis magna dolor vitae
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- FEATURE BOX #5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="fbox-2 icon-xs wow fadeInUp" data-wow-delay="0.7s">
+
+                        <!-- Icon  -->
+                        <span class="blue-color flaticon-063-folder"></span>
+
+                        <!-- Text -->
+                        <div class="fbox-2-txt">
+
+                            <!-- Title -->
+                            <h5 class="h5-sm">Disk Health</h5>
+
+                            <!-- Text -->
+                            <p>Porta semper lacus cursus, feugiat primis ultrice in ligula risus auctor
+                                tempus feugiat dolor impedit felis magna dolor vitae
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- FEATURE BOX #6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="fbox-2 icon-xs wow fadeInUp" data-wow-delay="0.5s">
+
+                        <!-- Icon  -->
+                        <span class="blue-color flaticon-019-reset"></span>
+
+                        <!-- Text -->
+                        <div class="fbox-2-txt">
+
+                            <!-- Title -->
+                            <h5 class="h5-sm">Data Backup</h5>
+
+                            <!-- Text -->
+                            <p>Porta semper lacus cursus, feugiat primis ultrice in ligula risus auctor
+                                tempus feugiat dolor impedit felis magna dolor vitae
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>       <!-- End row -->
+        </div>       <!-- End container -->
+    </section>    <!-- END FEATURES-2 -->
+
+
+    <!-- INFO-12
+    ============================================= -->
+    <section id="info-12" class="info-12-row bg-lightgrey wide-100 info-section division">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+
+
+                <!-- TEXT BLOCK -->
+                <div class="col-md-6">
+                    <div class="txt-block pc-45">
+                        <div id="list-tab" class="list-group" role="tablist">
+
+
+                            <!-- TAB #1 NAVIGATION LINK -->
+                            <a id="tab1-list" class="list-group-item list-group-item-action active" data-toggle="list"
+                               href="#tab-1" role="tab" aria-controls="tab-1">
+                                <div class="ibox-5">
+
+                                    <!-- Text -->
+                                    <h5 class="h5-sm">Scan for Lost Data</h5>
+                                    <p>Semper lacus cursus porta, feugiat primis in luctus ultrice tellus potenti neque
+                                        dolor in primis congue
+                                    </p>
+
+                                </div>
+                            </a>
+
+
+                            <!-- TAB #2 NAVIGATION LINK -->
+                            <a id="tab2-list" class="list-group-item list-group-item-action" data-toggle="list"
+                               href="#tab-2" role="tab" aria-controls="tab-2">
+                                <div class="ibox-5">
+
+                                    <!-- Text -->
+                                    <h5 class="h5-sm">Detect & Delete Duplicates</h5>
+                                    <p>Lacus cursus porta,feugiat primis congue magna purus at pretium ligula rutrum
+                                        luctus and ultrice tellus
+                                    </p>
+
+                                </div>
+                            </a>
+
+
+                            <!-- TAB #3 NAVIGATION LINK -->
+                            <a id="tab3-list" class="list-group-item list-group-item-action" data-toggle="list"
+                               href="#tab-3" role="tab" aria-controls="tab-3">
+                                <div class="ibox-5">
+
+                                    <!-- Text -->
+                                    <h5 class="h5-sm">Clear Your Mailbox</h5>
+                                    <p>Luctus congue magna at pretium purus pretium ligula rutrum neque incidunt tempor
+                                        laoreet ipsum rhoncus, tempor posuere ligula varius donec purus feugiat
+                                    </p>
+
+                                </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+                </div>    <!-- END TEXT BLOCK -->
+
+
+                <!-- IMAGE BLOCK -->
+                <div class="col-md-6">
+                    <div class="info-img text-center pr-45">
+                        <div id="nav-tabContent" class="tab-content">
+
+
+                            <!-- TAB #1 IMAGE -->
+                            <div id="tab-1" class="tab-pane show active" role="tabpanel" aria-labelledby="tab1-list">
+                                <img class="img-fluid" src="images/image-02.png" alt="tab-image"/>
+                            </div>
+
+
+                            <!-- TAB #2 IMAGE -->
+                            <div id="tab-2" class="tab-pane" role="tabpanel" aria-labelledby="tab2-list">
+                                <div class="video-preview text-center">
+
+                                    <!-- Change the link HERE!!! -->
+                                    <a class="video-popup2" href="https://www.youtube.com/watch?v=7e90gBu4pas">
+
+                                        <!-- Play Icon -->
+                                        <div class="video-btn play-icon-blue">
+                                            <div class="video-block-wrapper">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                        </div>
+
+                                        <!-- Preview Image -->
+                                        <img class="img-fluid" src="images/image-04.png" alt="video-preview">
+
+                                    </a>
+
+                                </div>
+                            </div>
+
+
+                            <!-- TAB #3 IMAGE -->
+                            <div id="tab-3" class="tab-pane" role="tabpanel" aria-labelledby="tab3-list">
+                                <img class="img-fluid" src="images/image-17.png" alt="tab-image"/>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>    <!-- END IMAGE BLOCK -->
+
+
+            </div>       <!-- End row -->
+        </div>        <!-- End container -->
+    </section>     <!-- END INFO-12 -->
+
+
+    <!-- INFO-4
+    ============================================= -->
+    <section id="info-4" class="info-4-row pt-100 info-section division">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+
+
+                <!-- IMAGE BLOCK -->
+                <div class="col-md-6">
+                    <div class="img-block pc-45 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.8s">
+                        <img class="img-fluid" src="images/image-12.png" alt="info-image">
+                    </div>
+                </div>
+
+
+                <!-- TEXT BLOCK -->
+                <div class="col-md-6">
+                    <div class="txt-block pc-45 mb-40 wow fadeInUp" data-wow-delay="0.3s">
+
+                        <!-- Section ID -->
+                        <span class="section-id id-color">Totally Optimized</span>
+
+                        <!-- Title -->
+                        <h3 class="h3-lg">Keep your disk space organized</h3>
+
+                        <!-- List -->
+                        <ul class="txt-list mb-35">
+
+                            <li>Vitae auctor integer congue magna at pretium</li>
+
+                            <li>Integer congue magna at pretium purus pretium ligula rutrum luctus risus eros
+                                dolor auctor ipsum blandit purus
+                            </li>
+
+                            <li>Sagittis congue augue egestas volutpat egestas magna feugiat primis ultrice
+                                in ligula risus auctor
+                            </li>
+
+                            <li>Egestas magna ipsum vitae purus efficitur ipsum cubilia and laoreet pretium
+                                ligula rutrum luctus
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>   <!-- END TEXT BLOCK -->
+
+
+            </div>      <!-- End row -->
+        </div>     <!-- End container -->
+    </section>    <!-- END INFO-4 -->
+
+
+    <!-- STATISTIC-1
+    ============================================= -->
+    <div id="statistic-1" class="bg-fixed bg-graph wide-60 statistic-section division">
+        <div class="container white-color">
+
+
+            <!-- SECTION TITLE -->
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 section-title">
+
+                    <!-- Title 	-->
+                    <h3 class="h3-lg">More Faster, More Powerful App</h3>
+
+                    <!-- Text -->
+                    <p class="p-md">Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis
+                        libero tempus, blandit posuere ligula varius magna congue cursus porta
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+                    <div class="row">
+
+
+                        <!-- STATISTIC BLOCK #1 -->
+                        <div class="col-sm-4">
+                            <div class="statistic-block wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                                <h5 class="statistic-number"><span class="count-element">28</span>%</h5>
+                                <p class="txt-400">Faster Access</p>
+                            </div>
+                        </div>
+
+
+                        <!-- STATISTIC BLOCK #2 -->
+                        <div class="col-sm-4">
+                            <div class="statistic-block wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                <h5 class="statistic-number"><span class="count-element">47</span>%</h5>
+                                <p class="txt-400">App Productivity</p>
+                            </div>
+                        </div>
+
+
+                        <!-- STATISTIC BLOCK #3 -->
+                        <div class="col-sm-4">
+                            <div class="statistic-block wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">
+                                <h5 class="statistic-number"><span class="count-element">54</span>%</h5>
+                                <p class="txt-400">Battery Saving</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>    <!-- End row -->
+
+
+        </div>     <!-- End container -->
+    </div>     <!-- END STATISTIC-1 -->
+
+
+    <!-- INFO-10
+    ============================================= -->
+    <section id="info-10" class="info-10-row wide-60 info-section division">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+
+
+                <!-- TEXT BLOCK -->
+                <div class="col-md-6 col-xl-6">
+                    <div class="txt-block pc-45 mb-40">
+
+
+                        <!-- INFO BOX #1 -->
+                        <div class="ibox-4 icon-xs wow fadeInUp" data-wow-delay="0.3s">
+
+                            <!-- Icon & Title -->
+                            <div class="fbox-4-title clearfix">
+                                <span class="flaticon-018-trophy"></span>
+                                <h5 class="h5-sm">No Expert Skills Needed</h5>
+                            </div>
+
+                            <!-- Text -->
+                            <p>An enim nullam tempor sapien gravida donec blandit ipsum porta justo integer odio velna
+                                vitae auctor integer congue magna at pretium purus ante pretium ligula luctus risus
+                            </p>
+
+                        </div>
+
+
+                        <!-- INFO BOX #2 -->
+                        <div class="ibox-4 icon-xs mt-30 wow fadeInUp" data-wow-delay="0.5s">
+
+                            <!-- Icon & Title -->
+                            <div class="fbox-4-title clearfix">
+                                <span class="flaticon-090-settings-1"></span>
+                                <h5 class="h5-sm">Real Time Customization</h5>
+                            </div>
+
+                            <!-- Text -->
+                            <p>Aliquam a augue suscipit, luctus neque purus ipsum odio velna vitae auctor integer
+                                congue magna at pretium purus pretium a blandit posuere ligula varius magna congue
+                            </p>
+
+                        </div>
+
+
+                        <!-- INFO BOX #3 -->
+                        <div class="ibox-4 icon-xs mt-30 wow fadeInUp" data-wow-delay="0.7s">
+
+                            <!-- Icon & Title -->
+                            <div class="fbox-4-title clearfix">
+                                <span class="flaticon-070-worldwide"></span>
+                                <h5 class="h5-sm">Multi-language Support</h5>
+                            </div>
+
+                            <!-- Text -->
+                            <p>An enim nullam tempor sapien gravida donec blandit ipsum porta justo integer odio velna
+                                vitae auctor integer congue magna at pretium purus ante pretium ligula rutrum risus
+                            </p>
+
+                        </div>
+
+
+                        <!-- INFO BOX #4 -->
+                        <div class="ibox-4 icon-xs mt-30 wow fadeInUp" data-wow-delay="0.9s">
+
+                            <!-- Icon & Title -->
+                            <div class="fbox-4-title clearfix">
+                                <span class="flaticon-068-help"></span>
+                                <h5 class="h5-sm">Rapid Customer Support</h5>
+                            </div>
+
+                            <!-- Text -->
+                            <p>Gravida donec blandit ipsum porta justo integer odio velna vitae auctor integer congue
+                                magna at pretium purus ligula rutrum an integer congue magna at purus neque dolor
+                            </p>
+
+                        </div>
+
+
+                    </div>
+                </div>    <!-- END TEXT BLOCK -->
+
+
+                <!-- IMAGE BLOCK -->
+                <div class="col-md-6 col-xl-5 offset-xl-1">
+                    <div class="info-10-img text-center mb-40 wow fadeInRight" data-wow-duration="1.5s"
+                         data-wow-delay="0.5s">
+                        <img class="img-fluid" src="images/dashboard-2.png" alt="info-image">
+                    </div>
+                </div>
+
+
+            </div>      <!-- End row -->
+        </div>       <!-- End container -->
+    </section>    <!-- END INFO-10 -->
+
+
+    <!-- INFO-1
+    ============================================= -->
+    <section id="info-1" class="info-1-row pt-100 info-section division">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+
+
+                <!-- TEXT BLOCK -->
+                <div class="col-md-6">
+                    <div class="txt-block pc-45 mb-40 wow fadeInUp" data-wow-delay="0.3s">
+
+                        <!-- Section ID -->
+                        <span class="section-id id-color">Handling With Ease</span>
+
+                        <!-- Title -->
+                        <h3 class="h3-lg">Remove all apps that display ads</h3>
+
+                        <!-- List -->
+                        <ul class="txt-list mb-35">
+
+                            <li>Vitae auctor integer congue magna at pretium</li>
+
+                            <li>Integer congue magna at pretium purus pretium ligula rutrum luctus risus eros
+                                dolor auctor ipsum blandit purus
+                            </li>
+
+                            <li>Egestas magna ipsum vitae purus efficitur ipsum cubilia and laoreet pretium
+                                ligula rutrum luctus
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>    <!-- END TEXT BLOCK -->
+
+
+                <!-- IMAGE BLOCK -->
+                <div class="col-md-6">
+                    <div class="img-block pr-45 mb-40 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.8s">
+                        <img class="img-fluid" src="images/image-18.png" alt="info-image">
+                    </div>
+                </div>
+
+
+            </div>      <!-- End row -->
+        </div>     <!-- End container -->
+    </section>    <!-- END INFO-1 -->
+
+
+    <!-- INFO-2
+    ============================================= -->
+    <section id="info-2" class="info-2-row wide-60 info-section division">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+
+
+                <!-- IMAGE BLOCK -->
+                <div class="col-md-6">
+                    <div class="img-block pl-45 mb-40 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.8s">
+                        <img class="img-fluid" src="images/image-17.png" alt="info-image">
+                    </div>
+                </div>
+
+
+                <!-- TEXT BLOCK -->
+                <div class="col-md-6">
+                    <div class="txt-block pc-45 mb-40 wow fadeInUp" data-wow-delay="0.3s">
+
+                        <!-- Section ID -->
+                        <span class="section-id id-color">Concrete Security</span>
+
+                        <!-- Title -->
+                        <h3 class="h3-lg">System and selective scanning for viruses</h3>
+
+                        <!-- List -->
+                        <ul class="txt-list mb-35">
+
+                            <li>Vitae auctor integer congue magna at pretium</li>
+
+                            <li>Integer congue magna at pretium purus pretium ligula rutrum luctus risus eros
+                                dolor auctor ipsum blandit purus
+                            </li>
+
+                            <li>Sagittis congue augue egestas volutpat egestas magna</li>
+
+                            <li>Egestas magna ipsum vitae purus efficitur ipsum cubilia and laoreet pretium
+                                ligula rutrum luctus
+                            </li>
+
+                        </ul>
+
+                        <!-- Button -->
+                        <a href="#download-1" class="btn btn-tra-grey black-hover">
+                            Download NextApp
+                        </a>
+
+                    </div>
+                </div>    <!-- END TEXT BLOCK -->
+
+
+            </div>      <!-- End row -->
+        </div>     <!-- End container -->
+    </section>    <!-- END INFO-2 -->
+
+
+    <!-- INFO-8
+    ============================================= -->
+    <section id="info-8" class="info-8-row bg-map bg-darkviolet bg-fixed pt-100 info-section division">
+        <div class="container white-color">
+            <div class="row">
+
+
+                <!-- TEXT BLOCK -->
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="txt-block text-center mb-50 wow fadeInUp" data-wow-delay="0.3s">
+
+                        <!-- Title -->
+                        <h3 class="h3-lg">Save Your Time By Using NextApp</h3>
+
+                        <!-- Text -->
+                        <p class="p-md">An enim nullam tempor sapien gravida donec an ipsum pretium porta justo integer
+                            at odio velna vitae auctor integer and congue magna at purus pretium ligula rutrum luctus
+                        </p>
+
+                        <!-- Button -->
+                        <a href="https://www.youtube.com/embed/SZEflIVnhH8"
+                           class="video-popup1 btn btn-green tra-hover mt-20">
+                            See the NextApp in action
+                        </a>
+
+                    </div>
+                </div>    <!-- END TEXT BLOCK -->
+
+
+                <!-- IMAGE BLOCK -->
+                <div class="col-md-12">
+                    <div class="img-block wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.8s">
+                        <img class="img-fluid" src="images/mac-screen.png" alt="info-image">
+                    </div>
+                </div>
+
+
+            </div>      <!-- End row -->
+        </div>     <!-- End container -->
+    </section>    <!-- END INFO-8 -->
+
+
+    <!-- MEDIA-2
+    ============================================= -->
+    <div id="media-2" class="media-section division">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="owl-carousel brands-logo-holder">
+
+
+                        <!-- BRAND LOGO IMAGE -->
+                        <div class="brand-logo">
+                            <img class="img-fluid" src="images/brand-1.png" alt="brand-logo"/>
+                        </div>
+
+                        <!-- BRAND LOGO IMAGE -->
+                        <div class="brand-logo">
+                            <img class="img-fluid" src="images/brand-2.png" alt="brand-logo"/>
+                        </div>
+
+                        <!-- BRAND LOGO IMAGE -->
+                        <div class="brand-logo">
+                            <img class="img-fluid" src="images/brand-3.png" alt="brand-logo"/>
+                        </div>
+
+                        <!-- BRAND LOGO IMAGE -->
+                        <div class="brand-logo">
+                            <img class="img-fluid" src="images/brand-4.png" alt="brand-logo"/>
+                        </div>
+
+                        <!-- BRAND LOGO IMAGE -->
+                        <div class="brand-logo">
+                            <img class="img-fluid" src="images/brand-5.png" alt="brand-logo">
+                        </div>
+
+                        <!-- BRAND LOGO IMAGE -->
+                        <div class="brand-logo">
+                            <img class="img-fluid" src="images/brand-6.png" alt="brand-logo"/>
+                        </div>
+
+                        <!-- BRAND LOGO IMAGE -->
+                        <div class="brand-logo">
+                            <img class="img-fluid" src="images/brand-7.png" alt="brand-logo"/>
+                        </div>
+
+                        <!-- BRAND LOGO IMAGE -->
+                        <div class="brand-logo">
+                            <img class="img-fluid" src="images/brand-3.png" alt="brand-logo"/>
+                        </div>
+
+                        <!-- BRAND LOGO IMAGE -->
+                        <div class="brand-logo">
+                            <img class="img-fluid" src="images/brand-5.png" alt="brand-logo"/>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>      <!-- End row -->
+        </div>        <!-- End container -->
+    </div>    <!-- END MEDIA-2 -->
+
+
+    <!-- TESTIMONIALS-1
+    ============================================= -->
+    <section id="reviews-1" class="wide-100 bg-lightgrey reviews-section division">
+        <div class="container">
+
+
+            <!-- SECTION TITLE -->
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 section-title">
+
+                    <!-- Title 	-->
+                    <h3 class="h3-lg">10k+ Customers Love NextApp</h3>
+
+                    <!-- Text -->
+                    <p class="p-md">Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis
+                        libero tempus, blandit posuere ligula varius magna congue cursus porta
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- TESTIMONIALS CAROUSEL -->
+            <div class="reviews-carousel">
+                <div class="center slider">
+
+
+                    <!-- TESTIMONIAL #1 -->
+                    <div class="review-1">
+
+                        <!-- Testimonial Text -->
+                        <div class="review-1-txt">
+
+                            <!-- Title -->
+                            <h5 class="h5-md">Super Support!</h5>
+
+                            <!-- Text -->
+                            <p>Etiam sapien sem at sagittis congue augue massa varius egestas magna suscipit magna
+                                tempus aliquet porta rutrum sodales auctor integer risus auctor rutrum
+                            </p>
+
+                        </div>
+
+                        <!-- Testimonial Author Avatar -->
+                        <div class="testimonial-avatar text-center">
+                            <img src="images/review-author-1.jpg" alt="review-author-avatar">
+                            <p>pebz13</p>
+                        </div>
+
+                        <!-- App Rating -->
+                        <div class="app-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                    </div>    <!-- END TESTIMONIAL #1 -->
+
+
+                    <!-- TESTIMONIAL #2 -->
+                    <div class="review-1">
+
+                        <!-- Testimonial Text -->
+                        <div class="review-1-txt">
+
+                            <!-- Title -->
+                            <h5 class="h5-md">Simple and Useful!</h5>
+
+                            <!-- Text -->
+                            <p>At sagittis congue augue egestas egestas magna ipsum vitae purus ipsum primis in cubilia
+                                laoreet augue egestas luctus donec diam ociis ultrice ligula magna suscipit lectus
+                                gestas
+                                augue in cubilia laoreet
+                            </p>
+
+                        </div>
+
+                        <!-- Testimonial Author Avatar -->
+                        <div class="testimonial-avatar clearfix">
+                            <img src="images/review-author-2.jpg" alt="review-author-avatar">
+                            <p>Evelyn Martinez</p>
+                        </div>
+
+                        <!-- App Rating -->
+                        <div class="app-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+
+                    </div>    <!-- END TESTIMONIAL #2 -->
+
+
+                    <!-- TESTIMONIAL #3 -->
+                    <div class="review-1">
+
+                        <!-- Testimonial Text -->
+                        <div class="review-1-txt">
+
+                            <!-- Title -->
+                            <h5 class="h5-md">Great Flexibility!</h5>
+
+                            <!-- Text -->
+                            <p>Mauris donec ociis et magnis sapien etiam sapien sem sagittis congue augue egestas
+                                et ultrice ligula egestas magna suscipit lectus gestas magna suscipit luctus undo
+                                volutpat
+                            </p>
+
+                        </div>
+
+                        <!-- Testimonial Author Avatar -->
+                        <div class="testimonial-avatar clearfix">
+                            <img src="images/review-author-3.jpg" alt="review-author-avatar">
+                            <p>Robert Peterson</p>
+                        </div>
+
+                        <!-- App Rating -->
+                        <div class="app-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                    </div>    <!-- END TESTIMONIAL #3 -->
+
+
+                    <!-- TESTIMONIAL #4 -->
+                    <div class="review-1">
+
+                        <!-- Testimonial Text -->
+                        <div class="review-1-txt">
+
+                            <!-- Title -->
+                            <h5 class="h5-md">I love this App!</h5>
+
+                            <!-- Text -->
+                            <p>An augue in cubilia laoreet magna suscipit egestas magna ipsum vitae purus ipsum
+                                primis in cubilia laoreet augue ultrice ligula egestas magna suscipit lectus gestas
+                                magna viverra dolor neque est gravida
+                            </p>
+
+                        </div>
+
+                        <!-- Testimonial Author Avatar -->
+                        <div class="testimonial-avatar clearfix">
+                            <img src="images/review-author-4.jpg" alt="review-author-avatar">
+                            <p>Leslie Serpas</p>
+                        </div>
+
+                        <!-- App Rating -->
+                        <div class="app-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                    </div>    <!-- END TESTIMONIAL #4 -->
+
+
+                    <!-- TESTIMONIAL #5 -->
+                    <div class="review-1">
+
+                        <!-- Testimonial Text -->
+                        <div class="review-1-txt">
+
+                            <!-- Title -->
+                            <h5 class="h5-md">Best App for Around!</h5>
+
+                            <!-- Text -->
+                            <p>Egestas egestas magna ipsum vitae purus efficitur ipsum primis in cubilia laoreet
+                                augue egestas luctus donec augue in cubilia laoreet ociis vitae purus diam
+                            </p>
+
+                        </div>
+
+
+                        <!-- Testimonial Author Avatar -->
+                        <div class="testimonial-avatar clearfix">
+                            <img src="images/review-author-5.jpg" alt="review-author-avatar">
+                            <p>Marisol19</p>
+                        </div>
+
+                        <!-- App Rating -->
+                        <div class="app-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+
+                    </div>    <!-- END TESTIMONIAL #5 -->
+
+
+                    <!-- TESTIMONIAL #6 -->
+                    <div class="review-1">
+
+                        <!-- Testimonial Text -->
+                        <div class="review-1-txt">
+
+                            <!-- Title -->
+                            <h5 class="h5-md">Minimalistic & Beautiful!</h5>
+
+                            <!-- Text -->
+                            <p>Augue egestas volutpat egestas et augue in cubilia laoreet magna suscipit luctus
+                                undo blandit vitae purus non diam tempus aliquet porta rutrum gestas neque est gravida
+                            </p>
+
+                        </div>
+
+                        <!-- Testimonial Author Avatar -->
+                        <div class="testimonial-avatar clearfix">
+                            <img src="images/review-author-6.jpg" alt="review-author-avatar">
+                            <p>Dan Hodges</p>
+                        </div>
+
+                        <!-- App Rating -->
+                        <div class="app-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                    </div>    <!-- END TESTIMONIAL #6 -->
+
+
+                    <!-- TESTIMONIAL #7 -->
+                    <div class="review-1">
+
+                        <!-- Testimonial Text -->
+                        <div class="review-1-txt">
+
+                            <!-- Title -->
+                            <h5 class="h5-md">Awesome Design!</h5>
+
+                            <!-- Text -->
+                            <p>Egestas et lobortis magna suscipit luctus undo blandit vitae purus lobortis non diam
+                                tempus aliquet porta rutrum arcu aenean primis in augue in cubilia laoreet
+                            </p>
+
+                        </div>
+
+                        <!-- Testimonial Author Avatar -->
+                        <div class="testimonial-avatar clearfix">
+                            <img src="images/review-author-4.jpg" alt="review-author-avatar">
+                            <p>Amelie Peterson</p>
+                        </div>
+
+                        <!-- App Rating -->
+                        <div class="app-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                    </div>    <!-- END TESTIMONIAL #7 -->
+
+
+                </div>
+            </div>    <!-- TESTIMONIALS CAROUSEL -->
+
+
+        </div>       <!-- End container -->
+    </section>    <!-- END TESTIMONIALS-1 -->
+
+
+    <!-- FAQs-1
+    ============================================= -->
+    <section id="faqs-1" class="wide-100 faqs-section division">
+        <div class="container">
+
+
+            <!-- SECTION TITLE -->
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 section-title">
+
+                    <!-- Title 	-->
+                    <h3 class="h3-lg">Have Questions? Look Here.</h3>
+
+                    <!-- Text -->
+                    <p class="p-md">Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis
+                        libero tempus, blandit posuere ligula varius magna congue cursus porta
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- QUESTIONS HOLDER -->
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <div id="accordion" role="tablist">
+
+
+                        <!-- ACCORDION CARD #1 -->
+                        <div class="card wow fadeInUp" data-wow-delay="0.3s">
+
+                            <!-- Card Title -->
+                            <div class="card-header" role="tab" id="headingOne">
+                                <h5 class="h5-sm">
+                                    <a data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true"
+                                       aria-controls="collapseOne">
+                                        Do you have a free trial?
+                                    </a>
+                                </h5>
+                            </div>
+
+                            <!-- Card Content -->
+                            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne"
+                                 data-parent="#accordion">
+                                <div class="card-body">
+
+                                    <!-- Text -->
+                                    <p>Aliqum mullam blandit tempor sapien gravida donec ipsum, at porta justo. Velna
+                                        vitae
+                                        auctor eros congue magna nihil impedit ligula risus. Mauris donec ociis et
+                                        magnis sapien
+                                        etiam sapien sem sagittis congue tempor gravida donec enim ipsum porta justo
+                                        integer at
+                                        odio velna congue integer vitae auctor eros dolor luctus odio placerat massa
+                                        magna
+                                    </p>
+
+                                    <!-- Text -->
+                                    <p>Nullam rutrum eget nunc varius etiam mollis risus congue aliquam etiam sapien
+                                        egestas,
+                                        congue gestas posuere cubilia congue ipsum mauris lectus laoreet gestas neque
+                                        vitae
+                                        auctor eros dolor luctus odio placerat magna cursus
+                                    </p>
+
+                                </div>
+                            </div>
+
+
+                        </div>    <!-- END ACCORDION CARD #1 -->
+
+
+                        <!-- ACCORDION CARD #2 -->
+                        <div class="card wow fadeInUp" data-wow-delay="0.5s">
+
+                            <!-- Card Title -->
+                            <div class="card-header" role="tab" id="headingTwo">
+                                <h5 class="h5-sm">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapseTwo" role="button"
+                                       aria-expanded="false" aria-controls="collapseTwo">
+                                        How can I update or cancel my personal information?
+                                    </a>
+                                </h5>
+                            </div>
+
+                            <!-- Card Content -->
+                            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo"
+                                 data-parent="#accordion">
+                                <div class="card-body">
+
+                                    <p>Maecenas gravida porttitor nunc, quis vehicula magna luctus tempor. Quisque vel
+                                        laoreet
+                                        turpis. Urna augue, viverra a augue eget, dictum tempor diam. Sed pulvinar
+                                        consectetur
+                                        nibh, vel imperdiet dui varius viverra. Pellentesque ac massa lorem. Fusce eu
+                                        cursus est.
+                                        Fusce non nulla vitae massa placerat vulputate vel a purus
+                                    </p>
+
+                                </div>
+                            </div>
+
+                        </div>    <!-- END ACCORDION CARD #2 -->
+
+
+                        <!-- ACCORDION CARD #3 -->
+                        <div class="card wow fadeInUp" data-wow-delay="0.7s">
+
+                            <!-- Card Title -->
+                            <div class="card-header" role="tab" id="headingThree">
+                                <h5 class="h5-sm">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapseThree" role="button"
+                                       aria-expanded="false" aria-controls="collapseThree">
+                                        How do I download videos from online viewing?
+                                    </a>
+                                </h5>
+                            </div>
+
+                            <!-- Card Content -->
+                            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree"
+                                 data-parent="#accordion">
+                                <div class="card-body">
+
+                                    <!-- Text -->
+                                    <p>Nullam rutrum eget nunc varius etiam mollis risus congue aliquam etiam sapien
+                                        egestas,
+                                        congue gestas posuere cubilia congue ipsum mauris lectus laoreet gestas neque
+                                        vitae
+                                        auctor eros dolor luctus odio placerat magna cursus
+                                    </p>
+
+                                    <!-- List -->
+                                    <ul class="txt-list">
+
+                                        <li>Vitae auctor integer congue magna at pretium purus pretium ligula rutrum
+                                            luctus
+                                            risus eros dolor auctor
+                                        </li>
+
+                                        <li>Sagittis congue augue egestas volutpat egestas magna suscipit egestas magna
+                                            ipsum
+                                            vitae purus efficitur ipsum primis in cubilia laoreet augue egestas luctus
+                                            donec
+                                            diam.Tempor sapien gravida donec enim ipsum blandit magna at purus pretium
+                                            ligula
+                                            rutrum luctus gravida donec porta justo integer
+                                        </li>
+
+                                        <li>Justo odio integer a velna lectus aenean magna and mauris lectus pretium
+                                            ligula rutrum
+                                            luctus risus ac risus auctor gravida donec congue tempor gravida donec enim
+                                            ipsum porta
+                                            justo integer
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                        </div>      <!-- END ACCORDION CARD #3 -->
+
+
+                        <!-- ACCORDION CARD #4 -->
+                        <div class="card wow fadeInUp" data-wow-delay="0.9s">
+
+                            <!-- Card Title -->
+                            <div class="card-header" role="tab" id="headingFour">
+                                <h5 class="h5-sm">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapseFour" role="button"
+                                       aria-expanded="false" aria-controls="collapseFour">
+                                        Why do you require Bluetooth to be on?
+                                    </a>
+                                </h5>
+                            </div>
+
+                            <!-- Card Content -->
+                            <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour"
+                                 data-parent="#accordion">
+                                <div class="card-body">
+
+                                    <!-- Text -->
+                                    <p>Aliqum mullam blandit tempor sapien gravida donec ipsum, at porta justo. Velna
+                                        vitae
+                                        auctor eros congue magna nihil impedit ligula risus. Mauris donec ociis et
+                                        magnis sapien
+                                        etiam sapien sem sagittis congue tempor gravida donec enim ipsum porta justo
+                                        integer at
+                                        odio velna congue integer vitae auctor eros dolor luctus odio placerat
+                                    </p>
+
+                                </div>
+                            </div>
+
+                        </div>      <!-- END ACCORDION CARD #4 -->
+
+
+                        <!-- ACCORDION CARD #5 -->
+                        <div class="card wow fadeInUp" data-wow-delay="1.1s">
+
+                            <!-- Card Title -->
+                            <div class="card-header" role="tab" id="headingFive">
+                                <h5 class="h5-sm">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapseFive" role="button"
+                                       aria-expanded="false" aria-controls="collapseFive">
+                                        Will there be a NextApp Android app?
+                                    </a>
+                                </h5>
+                            </div>
+
+                            <!-- Card Content -->
+                            <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive"
+                                 data-parent="#accordion">
+                                <div class="card-body">
+
+                                    <!-- Text -->
+                                    <p>Curabitur ac dapibus libero. Quisque eu tristique neque. Phasellus blandit
+                                        tristique justo
+                                        ut aliquam. Aliquam vitae molestie nunc. Quisque sapien justo, aliquet non
+                                        molestie sed purus,
+                                        venenatis nec. Aliquam eget lacinia elit. Vestibulum tincidunt tincidunt massa,
+                                        et porttitor
+                                    </p>
+
+                                    <!-- Text -->
+                                    <p>Nullam non scelerisque lectus. In at mauris vel nisl convallis porta at vitae
+                                        dui. Nam lacus
+                                        ligula, vulputate molestie bibendum quis, aliquet elementum massa. Vestibulum ut
+                                        sagittis odio
+                                    </p>
+
+                                </div>
+                            </div>
+
+                        </div>      <!-- END ACCORDION CARD #5 -->
+
+
+                    </div>    <!-- END ACCORDION -->
+                </div>
+            </div>    <!-- END QUESTIONS HOLDER -->
+
+
+            <!-- MORE QUESTIONS BUTTON -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="more-questions wow fadeInUp" data-wow-delay="1.3s">
+                        <h5 class="h5-xs">Still have a question? <a href="files/faqs.html">Ask your question here</a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>       <!-- End container -->
+    </section>    <!-- END FAQs-1 -->
+
+
+    <!-- LANGUAGES-1
+    ============================================= -->
+    <section id="languages-1" class="bg-lightgrey  wide-60 languages-section division">
+        <div class="container">
+
+
+            <!-- SECTION TITLE -->
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 section-title">
+
+                    <!-- Title -->
+                    <h3 class="h3-lg">NextApp Speaks Your Language</h3>
+
+                    <!-- Text -->
+                    <p class="p-lg">Aliquam a augue suscipit, luctus neque purus ipsum neque</p>
+
+                </div>
+            </div>
+
+
+            <!-- FLAGS -->
+            <div class="row">
+
+
+                <!-- FLAG IMAGE -->
+                <div class="col-sm-3 col-md-2">
+                    <div class="flag-icon">
+                        <img class="flag-img" src="images/icons/flags/united-states.png" alt="flag-icon"/>
+                        <span>English</span>
+                    </div>
+                </div>
+
+                <!-- FLAG IMAGE -->
+                <div class="col-sm-3 col-md-2">
+                    <div class="flag-icon">
+                        <img class="flag-img" src="images/icons/flags/germany.png" alt="flag-icon"/>
+                        <span>Deutsch</span>
+                    </div>
+                </div>
+
+                <!-- FLAG IMAGE -->
+                <div class="col-sm-3 col-md-2">
+                    <div class="flag-icon">
+                        <img class="flag-img" src="images/icons/flags/spain.png" alt="flag-icon"/>
+                        <span>Español</span>
+                    </div>
+                </div>
+
+                <!-- FLAG IMAGE -->
+                <div class="col-sm-3 col-md-2">
+                    <div class="flag-icon">
+                        <img class="flag-img" src="images/icons/flags/italy.png" alt="flag-icon"/>
+                        <span>Italiano</span>
+                    </div>
+                </div>
+
+                <!-- FLAG IMAGE -->
+                <div class="col-sm-3 col-md-2">
+                    <div class="flag-icon">
+                        <img class="flag-img" src="images/icons/flags/france.png" alt="flag-icon"/>
+                        <span>Français</span>
+                    </div>
+                </div>
+
+                <!-- FLAG IMAGE -->
+                <div class="col-sm-3 col-md-2">
+                    <div class="flag-icon">
+                        <img class="flag-img" src="images/icons/flags/china.png" alt="flag-icon"/>
+                        <span>繁體中文</span>
+                    </div>
+                </div>
+
+                <!-- FLAG IMAGE -->
+                <div class="col-sm-3 col-md-2">
+                    <div class="flag-icon">
+                        <img class="flag-img" src="images/icons/flags/netherlands.png" alt="flag-icon"/>
+                        <span>Nederlands</span>
+                    </div>
+                </div>
+
+                <!-- FLAG IMAGE -->
+                <div class="col-sm-3 col-md-2">
+                    <div class="flag-icon">
+                        <img class="flag-img" src="images/icons/flags/brazil.png" alt="flag-icon"/>
+                        <span>Português do Brasil</span>
+                    </div>
+                </div>
+
+                <!-- FLAG IMAGE -->
+                <div class="col-sm-3 col-md-2">
+                    <div class="flag-icon">
+                        <img class="flag-img" src="images/icons/flags/russia.png" alt="flag-icon"/>
+                        <span>Русский</span>
+                    </div>
+                </div>
+
+                <!-- FLAG IMAGE -->
+                <div class="col-sm-3 col-md-2">
+                    <div class="flag-icon">
+                        <img class="flag-img" src="images/icons/flags/turkey.png" alt="flag-icon"/>
+                        <span>Türk</span>
+                    </div>
+                </div>
+
+                <!-- FLAG IMAGE -->
+                <div class="col-sm-3 col-md-2">
+                    <div class="flag-icon">
+                        <img class="flag-img" src="images/icons/flags/india.png" alt="flag-icon"/>
+                        <span>हिन्दी</span>
+                    </div>
+                </div>
+
+                <!-- FLAG IMAGE -->
+                <div class="col-sm-3 col-md-2">
+                    <div class="flag-icon">
+                        <img class="flag-img" src="images/icons/flags/japan-1.png" alt="flag-icon"/>
+                        <span>日本語</span>
+                    </div>
+                </div>
+
+
+            </div> <!-- END FLAGS -->
+
+        </div>       <!-- End container -->
+    </section>    <!-- END LANGUAGES-1 -->
+
+
+    <!-- BLOG-1
+    ============================================= -->
+    <section id="blog-1" class="wide-60 blog-section division">
+        <div class="container">
+
+
+            <!-- SECTION TITLE -->
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 section-title">
+
+                    <!-- Title 	-->
+                    <h3 class="h3-lg">Our Stories & Latest News</h3>
+
+                    <!-- Text -->
+                    <p class="p-md">Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis
+                        libero tempus, blandit posuere ligula varius magna congue cursus porta
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- BLOG POSTS -->
+            <div class="row">
+
+
+                <!-- BLOG POST #1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-post wow fadeInUp" data-wow-delay="0.3s">
+
+
+                        <!-- BLOG POST IMAGE -->
+                        <div class="blog-post-img mb-25">
+                            <img class="img-fluid" src="images/blog/post-1-img.jpg" alt="blog-post-image"/>
+                        </div>
+
+                        <!-- BLOG POST TEXT -->
+                        <div class="blog-post-txt">
+
+                            <!-- Post Data -->
+                            <p class="post-meta">Posted by J.Barnes on February 2, 2019</p>
+
+                            <!-- Post Link -->
+                            <h5 class="h5-sm"><a href="files/single-post.html">A partnership for the future of
+                                mobile-based AI capabilities</a></h5>
+
+                            <!-- Post Text -->
+                            <p>Aliqum mullam blandit tempor sapien and gravida donec ipsum at justo. Velna vitae
+                                auctor a congue magna tempor sapien eget gravida donec...
+                            </p>
+
+                        </div>
+
+
+                    </div>
+                </div>    <!-- END  BLOG POST #1 -->
+
+
+                <!-- BLOG POST #2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-post wow fadeInUp" data-wow-delay="0.5s">
+
+
+                        <!-- BLOG POST IMAGE -->
+                        <div class="blog-post-img mb-25">
+                            <img class="img-fluid" src="images/blog/post-2-img.jpg" alt="blog-post-image"/>
+                        </div>
+
+                        <!-- BLOG POST TEXT -->
+                        <div class="blog-post-txt">
+
+                            <!-- Post Data -->
+                            <p class="post-meta">Posted by Jthemes on January 30, 2019</p>
+
+                            <!-- Post Link -->
+                            <h5 class="h5-sm"><a href="files/single-post.html">NextApp is hiring! Help us with customer
+                                service</a></h5>
+
+                            <!-- Post Text -->
+                            <p>Aliqum mullam blandit tempor sapien and gravida donec ipsum at justo. Velna vitae
+                                auctor a congue magna tempor sapien eget gravida donec...
+                            </p>
+
+                        </div>
+
+
+                    </div>
+                </div>    <!-- END  BLOG POST #2 -->
+
+
+                <!-- BLOG POST #3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-post wow fadeInUp" data-wow-delay="0.7s">
+
+
+                        <!-- BLOG POST IMAGE -->
+                        <div class="blog-post-img mb-25">
+                            <img class="img-fluid" src="images/blog/post-3-img.jpg" alt="blog-post-image"/>
+                        </div>
+
+                        <!-- BLOG POST TEXT -->
+                        <div class="blog-post-txt">
+
+                            <!-- Post Data -->
+                            <p class="post-meta">Posted by J.Barnes on January 22, 2019</p>
+
+                            <!-- Post Link -->
+                            <h5 class="h5-sm"><a href="files/single-post.html">Why you should be using video in
+                                prospecting?</a></h5>
+
+                            <!-- Post Text -->
+                            <p>Aliqum mullam blandit tempor sapien and gravida donec ipsum at justo. Velna vitae
+                                auctor a congue magna tempor sapien eget gravida donec...
+                            </p>
+
+                        </div>
+
+
+                    </div>
+                </div>    <!-- END  BLOG POST #3 -->
+
+
+            </div>    <!-- END BLOG POSTS -->
+
+
+        </div>       <!-- End container -->
+    </section>    <!-- END BLOG-1 -->
+
+
+    <!-- DOWNLOAD-1
+    ============================================= -->
+    <section id="download-1" class="bg-scroll bg-image download-section division">
+        <div class="container white-color">
+            <div class="row">
+
+
+                <!-- DOWNLOAD TXT -->
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="download-txt text-center wow fadeInUp" data-wow-delay="0.3s">
+
+                        <!-- Title -->
+                        <h3 class="h3-xs">Getting started takes less than 5 minutes</h3>
+
+                        <!-- Text -->
+                        <p class="p-md">Feugiat eros, ac tincidunt ligula massa in faucibus orci luctus et ultrices
+                            posuere cubilia curae integer congue leo metus, eu mollis lorem primis in orci integer metus
+                            mollis faucibus
+                        </p>
+
+                        <!-- STORE BADGES -->
+                        <div class="stores-badge">
+
+                            <!-- Buttons -->
+                            <a href="#" class="btn btn-green tra-hover mr-15">Free Download</a>
+                            <a href="#" class="btn btn-tra-white black-hover">Buy For Only $8.99</a>
+
+                        </div>    <!-- END STORE BADGES -->
+
+                    </div>
+                </div>    <!-- END DOWNLOAD TXT -->
+
+
+            </div>      <!-- End row -->
+        </div>       <!-- End container -->
+    </section>    <!-- END DOWNLOAD-1 -->
+
+
+    <!-- MORE APPS
+    ============================================= -->
+    <section id="more-apps" class="wide-60 moreapps-section division">
+        <div class="container">
+
+
+            <!-- SECTION TITLE -->
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 section-title">
+
+                    <!-- Title 	-->
+                    <h3 class="h3-lg">Other Apps by Jthemes</h3>
+
+                    <!-- Text -->
+                    <p class="p-md">Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis
+                        libero tempus, blandit posuere ligula varius magna congue cursus porta
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <div class="row">
+
+
+                        <!-- OTHER APP #1 -->
+                        <div class="col-sm-4">
+                            <div class="app-box text-center mb-40 wow fadeInUp" data-wow-delay="0.3s">
+
+                                <div class="m-img">
+                                    <img class="img-fluid" src="images/app-logo-1.png" width="150" height="150"
+                                         alt="app-logo">
+                                </div>
+
+                                <!-- Title -->
+                                <h5 class="h5-xl">AllFixer</h5>
+                                <span class="app-cat">Productivity</span>
+
+                                <!-- Text -->
+                                <p>Aliquam a augue luctus neque purus ipsum neque dolor primis suscipit</p>
+
+                                <!-- Links -->
+                                <div class="app-links">
+                                    <a href="#"><i class="fab fa-apple"></i> <span>IOS</span></a>
+                                    <a href="#"><i class="fab fa-android"></i> <span>Android</span></a>
+                                </div>
+
+                            </div>
+                        </div>    <!-- END OTHER APP #1 -->
+
+
+                        <!-- OTHER APP #2 -->
+                        <div class="col-sm-4">
+                            <div class="app-box text-center mb-40 wow fadeInUp" data-wow-delay="0.5s">
+
+                                <div class="m-img">
+                                    <img class="img-fluid" src="images/app-logo-2.png" width="150" height="150"
+                                         alt="app-logo">
+                                </div>
+
+                                <!-- Title -->
+                                <h5 class="h5-xl">AppSet</h5>
+                                <span class="app-cat">Social Networking</span>
+
+                                <!-- Text -->
+                                <p>Aliquam a augue luctus neque purus ipsum neque dolor primis suscipit</p>
+
+                                <!-- Links -->
+                                <div class="app-links">
+                                    <a href="#"><i class="fab fa-apple"></i> <span>IOS</span></a>
+                                    <a href="#"><i class="fab fa-android"></i> <span>Android</span></a>
+                                </div>
+
+                            </div>
+                        </div>    <!-- END OTHER APP #2 -->
+
+
+                        <!-- OTHER APP #3 -->
+                        <div class="col-sm-4">
+                            <div class="app-box text-center mb-40 wow fadeInUp" data-wow-delay="0.7s">
+
+                                <div class="m-img">
+                                    <img class="img-fluid" src="images/app-logo-3.png" width="150" height="150"
+                                         alt="app-logo">
+                                </div>
+
+                                <!-- Title -->
+                                <h5 class="h5-xl">MobiCom</h5>
+                                <span class="app-cat">Finance</span>
+
+                                <!-- Text -->
+                                <p>Aliquam a augue luctus neque purus ipsum neque dolor primis suscipit</p>
+
+                                <!-- Links -->
+                                <div class="app-links">
+                                    <a href="#"><i class="fab fa-apple"></i> <span>IOS</span></a>
+                                    <a href="#"><i class="fab fa-android"></i> <span>Android</span></a>
+                                </div>
+
+                            </div>
+                        </div>    <!-- END OTHER APP #3 -->
+
+
+                    </div>
+                </div>
+            </div>     <!-- End row -->
+
+
+        </div>       <!-- End container -->
+    </section>    <!-- END MORE APPS -->
+
+
+    <!-- NEWSLETTER-1
+    ============================================= -->
+    <section id="newsletter-1" class="bg-scroll bg-lightgrey wide-70 newsletter-section division">
+        <div class="container">
+
+
+            <!-- SECTION TITLE -->
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 section-title">
+
+                    <!-- Section ID -->
+                    <span class="section-id id-color">Grab NextApp fo the best price today</span>
+
+                    <!-- Title 	-->
+                    <h3 class="h3-lg">Subscribe For Updates</h3>
+
+                    <!-- Text -->
+                    <p class="p-md">Subscribe to our newsletter now and our delivery owl will bring you
+                        our best deals, ideas and news about NextApp App
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- NEWSLETTER FORM -->
+            <div class="row">
+                <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+                    <div class="newsletter-txt text-center">
+                        <form class="newsletter-form">
+
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Your email address" required
+                                       id="s-email">
+                                <span class="input-group-btn">
+											<button type="submit" class="btn btn-green black-hover">Sign Up</button>
+										</span>
+                            </div>
+
+                            <!-- Small Text -->
+                            <p class="p-sm">14-day free trial and no credit card required.</p>
+
+                            <!-- Newsletter Form Notification -->
+                            <label for="s-email" class="form-notification"></label>
+
+                        </form>
+                    </div>
+                </div>
+            </div>      <!-- END NEWSLETTER FORM -->
+
+
+        </div>       <!-- End container -->
+    </section>    <!-- END NEWSLETTER-1 -->
+
+
+    <!-- FOOTER-5
+    ============================================= -->
+    <footer id="footer-5" class="wide-50 footer division">
+        <div class="container">
+
+
+            <!-- FOOTER CONTENT -->
+            <div class="row">
+
+
+                <!-- FOOTER INFO -->
+                <div class="col-md-4 col-lg-3">
+                    <div class="footer-info mb-40">
+
+                        <!-- Footer Logo -->
+                        <!-- For Retina Ready displays take a image, with double the amount of pixels that your image will be displayed (e.g 330 x 80 pixels) -->
+                        <img class="footer-logo" src="images/footer-logo.png" width="160" height="40"
+                             alt="footer-logo">
+
+                    </div>
+                </div>
+
+
+                <!-- FOOTER LINKS -->
+                <div class="col-md-3 col-lg-3 offset-lg-1">
+                    <div class="footer-links">
+
+                        <!-- Title -->
+                        <h5 class="h5-sm">Product</h5>
+
+                        <!-- Footer Links -->
+                        <ul class="foo-links clearfix">
+                            <li><p><a href="#">How It Works?</a></p></li>
+                            <li><p><a href="#">Privacy Policy</a></p></li>
+                            <li><p><a href="#">Terms of Service</a></p></li>
+                            <li><p><a href="#">Site Map</a></p></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+                <!-- FOOTER LINKS -->
+                <div class="col-md-2 col-lg-3">
+                    <div class="footer-links">
+
+                        <!-- Title -->
+                        <h5 class="h5-sm">Connect</h5>
+
+                        <!-- Footer Links -->
+                        <ul class="foo-links clearfix">
+                            <li><p><a href="#">FAQs</a></p></li>
+                            <li><p><a href="#">Editor Help</a></p></li>
+                            <li><p><a href="#">Life Chatting</a></p></li>
+                            <li><p><a href="#">Contact Us</a></p></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+                <!-- FOOTER SOCIAL LINKS -->
+                <div class="col-md-3 col-lg-2">
+                    <div class="footer-socials-links text-right mb-25">
+
+                        <!-- Social Links -->
+                        <h5 class="h5-sm"><a href="#" class="foo-facebook">Facebook</a></h5>
+                        <h5 class="h5-sm"><a href="#" class="foo-twitter">Twitter</a></h5>
+                        <h5 class="h5-sm"><a href="#" class="foo-instagram">Instagram</a></h5>
+                        <h5 class="h5-sm"><a href="#" class="foo-dribbble">Dribbble</a></h5>
+
+                        <!--
+                        <h5 class="h5-sm"><a href="#" class="foo-behance">Facebook</a></h5>
+                        <h5 class="h5-sm"><a href="#" class="foo-pinterest">Twitter</a></h5>
+                        <h5 class="h5-sm"><a href="#" class="foo-linkedin">Instagram</a></h5>
+                        <h5 class="h5-sm"><a href="#" class="google-plus">Dribbble</a></h5>
+                        <h5 class="h5-sm"><a href="#" class="youtube">Twitter</a></h5>
+                        <h5 class="h5-sm"><a href="#" class="foo-tumblr">Instagram</a></h5>
+                        <h5 class="h5-sm"><a href="#" class="foo-vk">Dribbble</a></h5>
+                        -->
+
+                    </div>
+                </div>
+
+
+            </div>     <!-- END FOOTER CONTENT -->
+
+
+            <!-- BOTTOM FOOTER -->
+            <div class="bottom-footer">
+                <div class="row">
+
+                    <!-- FOOTER COPYRIGHT -->
+                    <div class="col-md-12">
+                        <div class="footer-copyright">
+                            <p class="p-sm">&copy; 2019 NextApp. All Rights Reserved</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>    <!-- END BOTTOM FOOTER -->
+
+
+        </div>        <!-- End container -->
+    </footer>    <!-- END FOOTER-5 -->
+
+
+</div>    <!-- END PAGE CONTENT -->
+
+
+<!-- EXTERNAL SCRIPTS
+============================================= -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/fontawesome.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/retina.js"></script>
+<script src="js/jquery.appear.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.scrollto.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/contact-form.js"></script>
+<script src="js/quick-form.js"></script>
+<script src="js/comment-form.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/wow.js"></script>
+
+<!-- Custom Script -->
+<script src="js/custom.js"></script>
+
+<script>
+  new WOW().init();
+</script>
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!-- [if lt IE 9]>
+<script src="js/html5shiv.js" type="text/javascript"></script>
+<script src="js/respond.min.js" type="text/javascript"></script>
+<![endif] -->
+
+<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->
+<!--
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+-->
+
+
 </body>
+
+
 </html>
