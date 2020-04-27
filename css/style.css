@@ -1119,9 +1119,12 @@ a:focus {
 
 .btn:focus {
     color: #fff;
+    background-color: var(--color-phoenix-blue);
     -webkit-box-shadow: none;
     box-shadow: none;
+    animation: pulse 2s ease-in-out infinite;
 }
+
 
 .btn.btn-black:focus {
     color: #fff;

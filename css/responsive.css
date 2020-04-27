@@ -1270,9 +1270,6 @@
 
   #footer-3 .foo-links li p, #footer-3 .footer-copyright p { font-size: 1.0575rem; }
 
-  /* Inner Page Hero */
-  #page-hero {display: none;}
-
   /* Breadcrumb */
   #breadcrumb { margin-top: 72px; }
   .breadcrumb-item a, .breadcrumb-item.active  { font-size: 1.145rem; }
