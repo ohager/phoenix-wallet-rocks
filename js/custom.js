@@ -1,20 +1,20 @@
 // JavaScript Document
 
 
-	$(window).on('load', function() {
-
-		"use strict";
-
-		/*----------------------------------------------------*/
-		/*	Preloader
-		/*----------------------------------------------------*/
-
-		$("#loader").delay(100).fadeOut();
-		$("#loader-wrapper").delay(100).fadeOut("fast");
-
-		$(window).stellar({});
-
-	});
+	// $(window).on('load', function() {
+	//
+	// 	"use strict";
+	//
+	// 	/*----------------------------------------------------*/
+	// 	/*	Preloader
+	// 	/*----------------------------------------------------*/
+	//
+	// 	$("#loader").delay(100).fadeOut();
+	// 	$("#loader-wrapper").delay(100).fadeOut("fast");
+	//
+	// 	$(window).stellar({});
+	//
+	// });
 
 
 	$(window).on('scroll', function() {
@@ -277,37 +277,6 @@
 		});
 
 
-		/*----------------------------------------------------*/
-		/*	Reviews Grid
-		/*----------------------------------------------------*/
-
-		$('.grid-loaded').imagesLoaded(function () {
-	        var $grid = $('.masonry-wrap').isotope({
-	            itemSelector: '.review-3',
-	            percentPosition: true,
-	            transitionDuration: '0.7s',
-	            masonry: {
-	              columnWidth: '.review-3',
-	            }
-	        });
-	    });
-
-
-	    /*----------------------------------------------------*/
-		/*	Quwstions Grid
-		/*----------------------------------------------------*/
-
-		$('.grid-loaded').imagesLoaded(function () {
-	        var $grid = $('.masonry-wrap1').isotope({
-	            itemSelector: '.question-category',
-	            percentPosition: true,
-	            transitionDuration: '0.7s',
-	            masonry: {
-	              columnWidth: '.question-category',
-	            }
-	        });
-	    });
-
 
 		/*----------------------------------------------------*/
 		/*	Statistic Counter
@@ -326,179 +295,5 @@
 				});
 			},{accX: 0, accY: 0});
 		});
-
-
-		/*----------------------------------------------------*/
-		/*	Brands Logo Rotator
-		/*----------------------------------------------------*/
-
-		var owl = $('.brands-logo-holder');
-			owl.owlCarousel({
-				items: 6,
-				loop:true,
-				autoplay:true,
-				navBy: 1,
-				autoplayTimeout: 4000,
-				autoplayHoverPause: false,
-				smartSpeed: 1500,
-				responsive:{
-					0:{
-						items:2
-					},
-					640:{
-						items:3
-					},
-					767:{
-						items:3
-					},
-					768:{
-						items:4
-					},
-					991:{
-						items:4
-					},
-					1000:{
-						items:5
-					}
-				}
-		});
-
-
-		/*----------------------------------------------------*/
-		/*	Register Form Validation
-		/*----------------------------------------------------*/
-
-		$(".register-form").validate({
-			rules:{
-					name:{
-						required: true,
-						minlength: 2,
-						maxlength: 16,
-					},
-					email:{
-						required: true,
-						email: true,
-					},
-					phone:{
-						required: true,
-						digits: true,
-						}
-					},
-					messages:{
-							name:{
-								required: "Please enter no more than (1) characters"
-							},
-							email:{
-								required: "We need your email address to contact you",
-								email: "Your email address must be in the format of name@domain.com"
-							},
-							phone:{
-								required: "Please enter only digits",
-								digits: "Please enter a valid number"
-							},
-						}
-		});
-
-
-		/*----------------------------------------------------*/
-		/*	Contact Form Validation
-		/*----------------------------------------------------*/
-
-		$(".contact-form").validate({
-			rules:{
-					name:{
-						required: true,
-						minlength: 1,
-						maxlength: 16,
-					},
-					email:{
-						required: true,
-						email: true,
-					},
-					phone:{
-						required: true,
-						digits: true,
-					},
-					message:{
-						required: true,
-						minlength: 2,
-						}
-					},
-					messages:{
-							name:{
-								required: "Please enter no more than (1) characters"
-							},
-							email:{
-								required: "We need your email address to contact you",
-								email: "Your email address must be in the format of name@domain.com"
-							},
-							phone:{
-								required: "Please enter only digits",
-								digits: "Please enter a valid number"
-							},
-							message:{
-								required: "Please enter no more than (2) characters"
-							},
-						}
-		});
-
-
-		/*----------------------------------------------------*/
-		/*	Comment Form Validation
-		/*----------------------------------------------------*/
-
-		$(".comment-form").validate({
-			rules:{
-					name:{
-						required: true,
-						minlength: 1,
-						maxlength: 16,
-					},
-					email:{
-						required: true,
-						email: true,
-					},
-					message:{
-						required: true,
-						minlength: 2,
-						}
-					},
-					messages:{
-							name:{
-								required: "Please enter no more than (1) characters"
-							},
-							email:{
-								required: "We need your email address to contact you",
-								email: "Your email address must be in the format of name@domain.com"
-							},
-							message:{
-								required: "Please enter no more than (2) characters"
-							},
-						}
-		});
-
-
-		/*----------------------------------------------------*/
-		/*	Newsletter Subscribe Form
-		/*----------------------------------------------------*/
-
-		$('.newsletter-form').ajaxChimp({
-        language: 'cm',
-        url: 'http://jthemes.us3.list-manage.com/subscribe/post?u=af1a6c0b23340d7b339c085b4&id=344a494a6e'
-            //http://xxx.xxx.list-manage.com/subscribe/post?u=xxx&id=xxx
-		});
-
-
-		$.ajaxChimp.translations.cm = {
-			'submit': 'Submitting...',
-			0: 'We have sent you a confirmation email',
-			1: 'Please enter your email address',
-			2: 'An email address must contain a single @',
-			3: 'The domain portion of the email address is invalid (the portion after the @: )',
-			4: 'The username portion of the email address is invalid (the portion before the @: )',
-			5: 'This email address looks fake or invalid. Please enter a real email address'
-		};
-
-
 
 	});

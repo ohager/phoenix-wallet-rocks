@@ -2663,7 +2663,7 @@ span.id-color {
 
 .btns-group .btn .svg-inline--fa,
 .btns-group .btn .svg-inline--fa:hover {
-    font-size: 2rem;
+    font-size: 2em;
     margin-right: 0.25em;
     top: -1px;
     position: relative;
@@ -2671,7 +2671,7 @@ span.id-color {
 
 .btns-group .btn,
 .btns-group .store img {
-    margin-bottom: 25px;
+    margin-bottom: 12px;
 }
 
 .btns-group p {
