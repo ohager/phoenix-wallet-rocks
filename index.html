@@ -89,9 +89,6 @@
                 <!-- For Retina Ready displays take a image with double the amount of pixels that your image will be displayed (e.g 240 x 60 pixels) -->
                 <a href="#hero-19" class="navbar-brand logo-black"><img src="images/phoenix-burst-logo.svg"
                                                                         height="60" alt="header-logo"></a>
-                <a href="#hero-19" class="navbar-brand logo-white"><img src="images/phoenix-burst-logo.svg"
-                                                                        height="60" alt="header-logo"></a>
-
 
                 <!-- Responsive Menu Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
@@ -144,7 +141,8 @@
 
     <!-- HERO-19
     ============================================= -->
-    <section id="hero-19" class="bg-fixed hero-section division">
+    <section id="hero-19" class="hero-section division">
+        <div id="bg-phoenix" class="bg-fixed"></div>
         <div class="container">
             <div class="row">
 
@@ -167,7 +165,10 @@
                                 <!-- Preview Image -->
 
                             </a>
-                            <img class="img-fluid" src="images/phoenix_crossplatform_small.webp" alt="video-preview">
+                            <picture>
+                                <source type="image/webp" srcset="images/phoenix_crossplatform_small.webp">
+                                <img class="img-fluid" src="images/phoenix_crossplatform_small.png" alt="Cross Platform Wallet">
+                            </picture>
                         </div>
 
                         <!-- Title -->
@@ -246,7 +247,7 @@
                     <div class="fbox-2 icon-xs wow fadeInUp" data-wow-delay="0.3s">
 
                         <!-- Icon  -->
-                        <span class="blue-color flaticon-103-keyhole"></span>
+                        <span class="blue-color flaticon-074-padlock"></span>
 
                         <!-- Text -->
                         <div class="fbox-2-txt">
@@ -290,16 +291,16 @@
                     <div class="fbox-2 icon-xs wow fadeInUp" data-wow-delay="0.7s">
 
                         <!-- Icon  -->
-                        <span class="blue-color flaticon-103-keyhole"></span>
+                        <span class="blue-color flaticon-070-worldwide"></span>
 
                         <!-- Text -->
                         <div class="fbox-2-txt">
 
                             <!-- Title -->
-                            <h5 class="h5-sm">More Interopable</h5>
+                            <h5 class="h5-sm">Internationalization</h5>
 
                             <!-- Text -->
-                            <p>Send and receive Burst easily with full deep link and QR code support.</p>
+                            <p>Blockchain is global and so is Phoenix. The wallet supports over 30 languages.</p>
 
                         </div>
 
@@ -312,7 +313,7 @@
                     <div class="fbox-2 icon-xs wow fadeInUp" data-wow-delay="0.3s">
 
                         <!-- Icon  -->
-                        <span class="blue-color flaticon-054-sim-card"></span>
+                        <span class="blue-color flaticon-042-line-chart"></span>
 
                         <!-- Text -->
                         <div class="fbox-2-txt">
@@ -334,7 +335,7 @@
                     <div class="fbox-2 icon-xs wow fadeInUp" data-wow-delay="0.7s">
 
                         <!-- Icon  -->
-                        <span class="blue-color flaticon-063-folder"></span>
+                        <span class="blue-color flaticon-048-responsive"></span>
 
                         <!-- Text -->
                         <div class="fbox-2-txt">
@@ -356,7 +357,7 @@
                     <div class="fbox-2 icon-xs wow fadeInUp" data-wow-delay="0.5s">
 
                         <!-- Icon  -->
-                        <span class="blue-color flaticon-019-reset"></span>
+                        <span class="blue-color flaticon-035-coding "></span>
 
                         <!-- Text -->
                         <div class="fbox-2-txt">
@@ -380,7 +381,7 @@
 
     <!-- INFO-12
     ============================================= -->
-    <section id="info-12" class="info-12-row bg-lightgrey wide-100 info-section division">
+    <section id="info-12" class="info-12-row bg-phoenix-blue wide-100 info-section division">
         <div class="container">
             <div class="row d-flex align-items-center">
 
@@ -395,11 +396,10 @@
                             <a id="tab1-list" class="list-group-item list-group-item-action active" data-toggle="list"
                                href="#tab-1" role="tab" aria-controls="tab-1">
                                 <div class="ibox-5">
-
                                     <!-- Text -->
-                                    <h5 class="h5-sm">Scan for Lost Data</h5>
-                                    <p>Semper lacus cursus porta, feugiat primis in luctus ultrice tellus potenti neque
-                                        dolor in primis congue
+                                    <h5 class="h5-sm">Awesome Web Technologies</h5>
+                                    <p>
+                                        Phoenix has a modular architecture and is built on an impressive technology stack: Angular 8+, Electron, React-Native and Typescript.
                                     </p>
 
                                 </div>
@@ -412,9 +412,10 @@
                                 <div class="ibox-5">
 
                                     <!-- Text -->
-                                    <h5 class="h5-sm">Detect & Delete Duplicates</h5>
-                                    <p>Lacus cursus porta,feugiat primis congue magna purus at pretium ligula rutrum
-                                        luctus and ultrice tellus
+                                    <h5 class="h5-sm">Interoperable</h5>
+                                    <p>
+                                        Through <em>Deep Link</em> support, other apps can easily interoperate with Phoenix.
+                                        For example, one can send and receive Burst securely using QR Codes.
                                     </p>
 
                                 </div>
@@ -427,9 +428,10 @@
                                 <div class="ibox-5">
 
                                     <!-- Text -->
-                                    <h5 class="h5-sm">Clear Your Mailbox</h5>
-                                    <p>Luctus congue magna at pretium purus pretium ligula rutrum neque incidunt tempor
-                                        laoreet ipsum rhoncus, tempor posuere ligula varius donec purus feugiat
+                                    <!-- Text -->
+                                    <h5 class="h5-sm">Awesome Web Technologies</h5>
+                                    <p>
+                                        Phoenix has a modular architecture and is built on an impressive technology stack: Angular 8+, Electron, React-Native and Typescript.
                                     </p>
 
                                 </div>
@@ -449,36 +451,28 @@
 
                             <!-- TAB #1 IMAGE -->
                             <div id="tab-1" class="tab-pane show active" role="tabpanel" aria-labelledby="tab1-list">
-                                <img class="img-fluid" src="images/image-02.png" alt="tab-image"/>
+                                <picture class="animated fadeIn">
+                                    <source type="image/webp" srcset="images/phoenix_architecture.800px.webp">
+                                    <img class="img-fluid" src="images/phoenix_architecture.800px.png" alt="phoenix architecture"/>
+                                </picture>
                             </div>
 
 
                             <!-- TAB #2 IMAGE -->
                             <div id="tab-2" class="tab-pane" role="tabpanel" aria-labelledby="tab2-list">
-                                <div class="video-preview text-center">
-
-                                    <!-- Change the link HERE!!! -->
-                                    <a class="video-popup2" href="https://www.youtube.com/watch?v=7e90gBu4pas">
-
-                                        <!-- Play Icon -->
-                                        <div class="video-btn play-icon-blue">
-                                            <div class="video-block-wrapper">
-                                                <i class="fas fa-play"></i>
-                                            </div>
-                                        </div>
-
-                                        <!-- Preview Image -->
-                                        <img class="img-fluid" src="images/image-04.png" alt="video-preview">
-
-                                    </a>
-
-                                </div>
+                                <picture class="animated fadeIn">
+                                    <source type="image/webp" srcset="images/phoenix_qrcode_white.webp">
+                                    <img class="img-fluid" src="images/phoenix_qrcode_white.png" alt="Interoperability"/>
+                                </picture>
                             </div>
 
 
                             <!-- TAB #3 IMAGE -->
                             <div id="tab-3" class="tab-pane" role="tabpanel" aria-labelledby="tab3-list">
-                                <img class="img-fluid" src="images/image-17.png" alt="tab-image"/>
+                                <picture class="animated fadeIn">
+                                    <source type="image/webp" srcset="images/phoenix_architecture.800px.webp">
+                                    <img class="img-fluid" src="images/phoenix_architecture.800px.png" alt="phoenix architecture"/>
+                                </picture>
                             </div>
 
 
@@ -696,7 +690,10 @@
                 <div class="col-md-6 col-xl-5 offset-xl-1">
                     <div class="info-10-img text-center mb-40 wow fadeInRight" data-wow-duration="1.5s"
                          data-wow-delay="0.5s">
-                        <img class="img-fluid" src="images/dashboard-2.png" alt="info-image">
+                        <picture>
+                            <source type="image/webp" srcset="images/Dashboard.beta14.webp">
+                            <img class="img-fluid" src="images/Dashboard.beta14.jpg" alt="Cross Platform Wallet">
+                        </picture>
                     </div>
                 </div>
 

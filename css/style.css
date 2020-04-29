@@ -684,6 +684,10 @@ body {
     background-color: #2e71f1;
 }
 
+.bg-phoenix-blue {
+    background-color: var(--color-phoenix-blue);
+}
+
 .bg-deepblue {
     background-color: #0b4265;
 }
@@ -2202,175 +2206,19 @@ span.id-color {
     z-index: 3;
 }
 
-#hero-5 .container,
-#hero-15 .container {
-    overflow: hidden;
-}
-
-#hero-1 {
-    background-image: url(../images/hero-1.jpg);
-    padding-top: 130px;
-    padding-bottom: 25px;
-}
-
-.hero-2-txt {
-    padding-top: 150px;
-    padding-bottom: 500px;
-}
-
-#hero-3 {
-    background-image: url(../images/hero-3.jpg);
-    padding-top: 150px;
-    padding-bottom: 60px;
-    position: relative;
-    z-index: 3;
-}
-
-#hero-3 .container,
-#hero-12 .container {
-    position: relative;
-    z-index: 9999 !important;
-}
-
-.right-incline {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-image: url(../images/right-incline.png);
-    width: 100%;
-    height: 200px;
-    z-index: 999;
-}
-
-#hero-4 {
-    background-color: #283034;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-4-content {
-    position: relative;
-    background-color: rgba(0, 0, 0, .5);
-    z-index: 999;
-    padding-top: 200px;
-    padding-bottom: 120px;
-}
-
-#hero-5 {
-    padding-top: 140px;
-}
-
-#hero-6 {
-    padding-top: 140px;
-    padding-bottom: 60px;
-}
-
-.hero-7-logo {
-    background-image: url(../images/hero-7.jpg);
-    padding-top: 160px;
-    padding-bottom: 40px;
-}
-
-#hero-8 {
-    background-color: #ffbe2e;
-    padding-top: 130px;
-    padding-bottom: 60px;
-}
-
-#hero-9 {
-    background-image: url(../images/hero-9.jpg);
-    padding-top: 140px;
-}
-
-#hero-10 {
-    background-image: url(../images/hero-10.jpg);
-    padding-top: 150px;
-    padding-bottom: 50px;
-}
-
-.hero-11-txt {
-    background-image: url(../images/hero-11.jpg);
-    padding-top: 200px;
-    padding-bottom: 120px;
-    position: relative;
-}
-
-#hero-12 {
-    background-image: url(../images/hero-12.jpg);
-    padding-top: 130px;
-    padding-bottom: 20px;
-    position: relative;
-    z-index: 3;
-}
-
-.bottom-wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-image: url(../images/hero-bottom-wave.png);
-    width: 100%;
-    height: 315px;
-    z-index: 999;
-}
-
-#hero-13 {
-    background-image: url(../images/hero-13.jpg);
-    padding-top: 160px;
-    position: relative;
-}
-
-#hero-14 {
-    background-image: url(../images/bg-map.png);
-    padding-top: 200px;
-    padding-bottom: 20px;
-}
-
-#hero-15 {
-    padding-top: 140px;
-    position: relative;
-    z-index: 3;
-}
-
-.left-incline {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-image: url(../images/left-incline.png);
-    width: 100%;
-    height: 80px;
-    z-index: 999;
-}
-
-#hero-16 {
-    background-image: url(../images/hero-16.jpg);
-    padding-top: 170px;
-    padding-bottom: 110px;
-}
-
-.hero-17-txt {
-    background-image: url(../images/hero-17.jpg);
-    background-position: center bottom;
-}
-
-#hero-17-content {
-    padding-top: 160px;
-    padding-bottom: 275px;
-}
-
-#hero-18 {
-    padding-top: 150px;
-}
-
 #hero-19 {
+    padding-top: 150px;
+}
+
+#bg-phoenix {
     background-image: url(../images/phoenix_noborder_transparent.svg);
     background-position: calc(100% + 280px);
-    padding-top: 150px;
-}
-
-#hero-20 {
-    background-image: url(../images/hero-20.png);
-    background-position: center bottom;
-    padding-top: 160px;
+    width: 100%;
+    height: 768px;
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    animation: fadeIn ease-out 4s;
 }
 
 /*------------------------------------------*/
