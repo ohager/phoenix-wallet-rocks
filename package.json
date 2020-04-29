@@ -1,0 +1,39 @@
+{
+  "name": "phoenix-wallet-rocks",
+  "version": "1.0.0",
+  "description": "Landing Page for Phoenix Crypto Wallet for Burstcoin",
+  "main": "./js/main.js",
+  "scripts": {
+    "build": "webpack-cli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohager/phoenix-wallet-rocks.git"
+  },
+  "keywords": [
+    "burstcoin",
+    "phoenix",
+    "wallet",
+    "crypto",
+    "cryptocoin"
+  ],
+  "author": "ohager, blankey1337",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ohager/phoenix-wallet-rocks/issues"
+  },
+  "homepage": "https://github.com/ohager/phoenix-wallet-rocks#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.5.3",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.2.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
