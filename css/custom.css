@@ -2492,7 +2492,7 @@ span.id-color {
 }
 
 #hero-19 p.p-lg {
-    color: #666;
+    color: var(--color-phoenix-lightgrey);
     padding: 0 10%;
     margin-bottom: 25px;
 }
