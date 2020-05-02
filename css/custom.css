@@ -681,7 +681,7 @@ body {
 }
 
 .bg-blue {
-    background-color: #2e71f1;
+    background-color: #039be5;
 }
 
 .bg-phoenix-blue {
@@ -5665,4 +5665,8 @@ nav a#pull {
 .btn-download-text {
     display: inline-grid;
     text-align: left;
+}
+
+#info-8 * {
+  color: #012341;
 }
