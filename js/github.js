@@ -14,7 +14,6 @@ const getReleases = async () =>
       .fail(reject)
   })
 
-
 function calcDownloadCount(releases) {
 
   const executablesFilter = ({name}) => name.endsWith('.exe')
@@ -34,12 +33,14 @@ function calcDownloadCount(releases) {
   return Promise.resolve(downloadCount)
 }
 
-function insertInHtml(downloadCount) {
+function insertDownloadcountInHtml(downloadCount) {
   $('#download-count').text(downloadCount)
 }
+
+
 
 (()=>{
   getReleases()
     .then(calcDownloadCount)
-    .then(insertInHtml)
+    .then(insertDownloadcountInHtml)
 })()
