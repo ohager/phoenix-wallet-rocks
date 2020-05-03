@@ -1,18 +1,57 @@
 const AppStoresDownloadOffset = 1500;
-const DefaultValue = 8000;
+const DefaultDownloadValue = 8000;
+const DefaultStatsValues = {
+  pulls: 1000,
+  stars: 64
+};
+
+const DefaultAjaxOptions = {
+  accepts: {
+    'Accept-Encoding': 'gzip,deflate,br'
+  },
+  dataType: "json",
+}
+
+const GraphQL = (gql) => {
+  return {
+    ...DefaultAjaxOptions,
+    method: 'POST',
+    url: 'https://phoenix-analytics-api.ohager.now.sh/api/github',
+    data: JSON.stringify({query: gql})
+  }
+}
 
 const getReleases = async () =>
-  new Promise((resolve, reject) => {
+  new Promise(resolve => {
     $.ajax({
-      accepts: {
-        'Accept-Encoding': 'gzip,deflate,br'
-      },
-      dataType: "json",
+      ...DefaultAjaxOptions,
       url: 'https://api.github.com/repos/burst-apps-team/phoenix/releases',
     })
       .done(resolve)
-      .fail(() => resolve(DefaultValue))
+      .fail(() => resolve(DefaultDownloadValue))
   })
+
+const getRepoStatsCount = async () => new Promise((resolve) => {
+  $.ajax(GraphQL(`query {
+    repository(owner:"burst-apps-team", name:"phoenix") {
+      pullRequests {
+        totalCount
+      }
+      stargazers {
+        totalCount
+      }
+    }
+  }`)
+  )
+    .done(({data}) => {
+      resolve({
+        pulls: data.repository.pullRequests.totalCount,
+        stars: data.repository.stargazers.totalCount
+      })
+    })
+    .fail(() => resolve(DefaultStatsValues))
+})
+
 
 const calcDownloadCount = releases => {
 
@@ -34,15 +73,29 @@ const calcDownloadCount = releases => {
 };
 
 const insertDownloadCountInHtml = downloadCount => {
-  console.log('download count', downloadCount)
   $('#download-count').text(downloadCount)
 };
 
-const blurNumber = n => Promise.resolve(Math.round(n / 50) * 50)
+const insertRepoStatsInHtml = ({pulls, stars}) => {
+  $('#pulls-count').text(pulls)
+  $('#stars-count').text(stars)
+};
 
-insertDownloadCountInHtml(DefaultValue)
+const blurNumber = n => Math.round(n / 50) * 50 - 50
+
+insertDownloadCountInHtml(DefaultDownloadValue)
+insertRepoStatsInHtml(DefaultStatsValues)
 
 getReleases()
   .then(calcDownloadCount)
-  .then(blurNumber)
+  .then(count => Promise.resolve(blurNumber(count)))
   .then(insertDownloadCountInHtml)
+
+getRepoStatsCount()
+  .then(({pulls, stars}) => Promise.resolve({
+      pulls: blurNumber(pulls),
+      stars
+    })
+  )
+  .then(insertRepoStatsInHtml)
+
