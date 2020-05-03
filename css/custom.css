@@ -930,7 +930,7 @@ ul {
 /*------------------------------------------*/
 
 a {
-    color: #333;
+    color: var(--color-phoenix-lightgrey);
     text-decoration: none;
     -webkit-transition: all 400ms ease-in-out;
     -moz-transition: all 400ms ease-in-out;
@@ -940,7 +940,8 @@ a {
 }
 
 a:hover {
-    color: #666;
+    color: var(--color-phoenix-lightgrey);
+    font-weight: bold;
     text-decoration: none;
 }
 
