@@ -21,13 +21,23 @@
     <!-- SITE TITLE -->
     <title>Phoenix - Cross-platform Wallet</title>
 
-    <!-- FAVICON AND TOUCH ICONS  -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Noto+Sans+TC:300,400,500,700,900"
@@ -83,7 +93,6 @@
                             <a class="nav-link" href="#about">
                                 About
                             </a>
-
                             <!-- Dropdown Menu
 
 
@@ -101,40 +110,23 @@
                         </li>
 
                         <li class="nav-item nl-simple"><a class="nav-link" href="#features">Features</a></li>
-                        <li class="nav-item nl-simple"><a class="nav-link" href="#faqs">FAQs</a></li>
-                        <li class="nav-item nl-simple"><a class="nav-link" href="https://github.com/burst-apps-team/phoenix" target="_blank">
-                            <i class="fab fa-github" style="font-size: 1.25rem; margin: 0 2px 2px 0"></i>
-                            Github
-                        </a></li>
-
-                        <!--                         AppStore Badge-->
-
+                        <li class="nav-item nl-simple"><a class="nav-link" href="#downloads">Download</a></li>
+                        <li class="nav-item nl-simple"><a class="nav-link" href="#burstjs">BurstJS</a></li>
                     </ul>
 
-                    <!-- Header Button
-                    <span class="navbar-text white-color">
-                      <a href="#" class="btn btn-blue tra-hover">Get Early Access</a>
-                  </span>	-->
-
                 </div>    <!-- End Navigation Menu -->
-
-
             </div>      <!-- End container -->
         </nav>       <!-- End navbar -->
     </header>    <!-- END HEADER -->
 
-
-    <!-- HERO-19
-    ============================================= -->
     <section id="hero-19" class="hero-section division">
         <div id="bg-phoenix" class="bg-fixed"></div>
         <div class="container">
             <div class="row">
 
-
                 <!-- HERO TEXT -->
                 <div class="col-md-10 offset-md-1">
-                    <div class="hero-txt text-center">
+                    <div id="downloads" class="hero-txt text-center">
 
                         <!-- Video Preview -->
                         <!-- TODO: Link the featured video (not ready yet) -->
@@ -214,8 +206,8 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="btn-notice mt-20">
-                            <p class="p-sm">Latest release: Phoenix 1.0.0</p>
+                        <div class="btn-notice mt-20 animated fadeIn">
+                            <p id="latest-release" class="p-sm"></p>
                         </div>
 
 
@@ -447,7 +439,8 @@
                             </div>
 
                             <!-- Text -->
-                            <p>Burst Apps Team developers are friendly and available on GitHub, Discord, and Telegram.</p>
+                            <p>Burst Apps Team developers are friendly and available on GitHub, Discord, and
+                                Telegram.</p>
 
                         </div>
 
@@ -488,7 +481,8 @@
                     <h3 class="h3-lg">Phoenix has a well-earned reputation</h3>
 
                     <!-- Text -->
-                    <p class="p-md">Phoenix puts emphasis on security and user experience, striking the ideal combination without compromising either.</p>
+                    <p class="p-md">Phoenix puts emphasis on security and user experience, striking the ideal
+                        combination without compromising either.</p>
 
                 </div>
             </div>
@@ -498,14 +492,14 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="statistic-block wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-                                <h5 class="statistic-number"><span class="count-element">7</span></h5>
+                                <h5 class="statistic-number"><span class="count-element">5</span></h5>
                                 <p class="txt-400">Operating Systems</p>
                             </div>
                         </div>
 
                         <div class="col-sm-3">
                             <div class="statistic-block wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-                                <h5 class="statistic-number"><span  id="stars-count" class="count-element">64</span></h5>
+                                <h5 class="statistic-number"><span id="stars-count" class="count-element">64</span></h5>
                                 <p class="txt-400">Stargazers</p>
                             </div>
                         </div>
@@ -519,7 +513,8 @@
 
                         <div class="col-sm-3">
                             <div class="statistic-block wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                                <h5 class="statistic-number"><span id="download-count" class="count-element"></span>+</h5>
+                                <h5 class="statistic-number"><span id="download-count" class="count-element"></span>+
+                                </h5>
                                 <p class="txt-400">Downloads</p>
                             </div>
                         </div>
@@ -599,6 +594,15 @@
 
                             <!-- TAB #1 IMAGE -->
                             <div id="tab-1" class="tab-pane show active" role="tabpanel" aria-labelledby="tab1-list">
+                                <a class="btn btn-download btn-white-outline-quad white-hover mr-10 animated fadeIn"
+                                   href="https://github.com/burst-apps-team/phoenix"
+                                   target="_blank">
+                                    <i class="fab fa-github" style="font-size: 2em !important; margin: 0 2px 2px 0"></i>
+                                    <div class="btn-download-text">
+                                        <small>Visit us on</small>
+                                        Github
+                                    </div>
+                                </a>
                                 <picture class="animated fadeIn">
                                     <source type="image/webp" srcset="images/socialite_octo.webp">
                                     <img class="img-fluid" src="images/socialite_octo.png"
@@ -676,7 +680,10 @@
                 <!-- IMAGE BLOCK -->
                 <div class="col-md-6">
                     <div class="img-block pr-45 mb-40 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.8s">
-                        <img class="img-fluid" src="images/image-18.png" alt="info-image">
+                        <picture>
+                            <source type="image/webp" srcset="images/image-18.webp">
+                            <img class="img-fluid" src="images/image-18.png" alt="Mobile Wallet">
+                        </picture>
                     </div>
                 </div>
 
@@ -696,7 +703,10 @@
                 <!-- IMAGE BLOCK -->
                 <div class="col-md-6">
                     <div class="img-block pl-45 mb-40 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.8s">
-                        <img class="img-fluid" src="images/image-17.png" alt="info-image">
+                        <picture>
+                            <source type="image/webp" srcset="images/image-17.webp">
+                            <img class="img-fluid" src="images/image-17.png" alt="Wallet Messaging">
+                        </picture>
                     </div>
                 </div>
 
@@ -713,23 +723,11 @@
 
                         <!-- List -->
                         <ul class="txt-list mb-35">
-
                             <li>Encrypted & plaintext messaging</li>
-
                             <li>View Burst account balances over time, in different currencies</li>
-
-                            <li>Receive push notifications whenever Burst is sent or received to an account
-                            </li>
-
+                            <li>Receive push notifications whenever Burst is sent or received to an account</li>
                             <li>Easily import and send to accounts using Unstoppable Domains .zil/.crypto addresses</li>
-
                         </ul>
-
-                        <!-- Button -->
-                        <a href="#download-1" class="btn btn-blue black-hover">
-                            Download Phoenix
-                        </a>
-
                     </div>
                 </div>    <!-- END TEXT BLOCK -->
 
@@ -737,6 +735,70 @@
             </div>      <!-- End row -->
         </div>     <!-- End container -->
     </section>    <!-- END INFO-2 -->
+
+    <section id="burstjs" class="info-1-row pt-100 info-section division">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+
+
+                <!-- TEXT BLOCK -->
+                <div class="col-md-6">
+                    <div class="txt-block pc-45 mb-40 wow fadeInUp" data-wow-delay="0.3s">
+
+                        <!-- Section ID -->
+                        <span class="section-id id-color">BUILD YOUR OWN BURSTCOIN APPS</span>
+
+                        <!-- Title -->
+                        <h3 class="h3-lg">The rock solid foundation of the Phoenix Wallet</h3>
+
+                        <!-- List -->
+                        <ul class="txt-list mb-35">
+                            <li>A state of the art programming library for Burstcoin</li>
+                            <li>Written in Typescript for best developer experience</li>
+                            <li>Applicable for all web and NodeJS applications</li>
+                            <li>Quality Assurance through automated CI/CD pipeline</li>
+                            <li>Almost complete test coverage</li>
+                            <li>Automatic static code and security analysis</li>
+                            <li>Optimized package size through low dependencies and state-of-the-art bundling</li>
+                            <li>Well documented</li>
+                            <li>Free, open and under permissive Apache 2.0 License</li>
+                        </ul>
+
+                    </div>
+                </div>    <!-- END TEXT BLOCK -->
+
+
+                <!-- IMAGE BLOCK -->
+                <div class="col-md-6 wow fadeInUp text-center" data-wow-duration="1.5s" data-wow-delay="0.8s">
+                    <a class="btn btn-download btn-white-outline-quad white-hover animated fadeIn"
+                       href="https://burst-apps-team.github.io/phoenix"
+                       target="_blank">
+                        <i class="fas fa-book" style="font-size: 2em !important; margin: 0 4px 2px 0"></i>
+                        <div class="btn-download-text">
+                            <small>Take me to the</small>
+                            Docs
+                        </div>
+                    </a>
+                    <div class="img-block p-0 mt-40 mb-40">
+                        <img class="img-fluid" src="images/burst-js.svg" alt="Powered by BurstJS">
+                    </div>
+
+                    <p>
+                        <a href="https://www.codacy.com/app/ohager/phoenix?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=burst-apps-team/phoenix&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/81a6119af03d4a7e8a55c65999884709" alt="Codacy Badge"></a>
+                        <a href="https://travis-ci.org/burst-apps-team/phoenix"><img src="https://travis-ci.org/burst-apps-team/phoenix.svg?branch=develop" alt="Build Status"></a>
+                        <a href="https://snyk.io/test/github/burst-apps-team/phoenix?targetFile=lib%2Fpackage.json"><img src="https://snyk.io/test/github/burst-apps-team/phoenix/badge.svg?targetFile=lib%2Fpackage.json" alt="Known Vulnerabilities"></a>
+                        <a href="https://codecov.io/gh/burst-apps-team/phoenix"><img src="https://codecov.io/gh/burst-apps-team/phoenix/branch/develop/graph/badge.svg" alt="codecov"></a>
+                        <img alt="License" src="https://img.shields.io/npm/l/@burstjs/core">
+                        <a href="https://lernajs.io/"><img src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg" alt="lerna"></a>
+                        <a href="https://www.npmjs.com/package/@burstjs/core"><img src="https://img.shields.io/npm/v/@burstjs/core.svg?style=flat" alt="npm"></a>
+                        <a href="https://www.jsdelivr.com/package/npm/@burstjs/core"><img src="https://data.jsdelivr.com/v1/package/npm/@burstjs/core/badge" alt="jsDelivr"></a>
+                    </p>
+                </div>
+
+
+            </div>      <!-- End row -->
+        </div>     <!-- End container -->
+    </section>    <!-- END INFO-1 -->
 
 
     <!-- INFO-8
@@ -754,26 +816,21 @@
                         <h3 class="h3-lg">Phoenix is the best way to Burst</h3>
 
                         <!-- Text -->
-                        <p class="p-md">Phoenix is a modern Burstcoin wallet that combines security with ease of use, made with love by the Burst Apps Team.
+                        <p class="p-md">Phoenix is a modern Burstcoin wallet that combines security with ease of use,
+                            made with love by the Burst Apps Team.
                         </p>
-
-                        <!-- Button -->
-                        <a href="https://www.youtube.com/embed/SZEflIVnhH8"
-                           class="video-popup1 btn btn-blue black-hover mt-20">
-                            Download Phoenix
-                        </a>
-
                     </div>
                 </div>    <!-- END TEXT BLOCK -->
-
 
                 <!-- IMAGE BLOCK -->
                 <div class="col-md-12">
                     <div class="img-block wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.8s">
-                        <img class="img-fluid" src="images/mac-screen.png" alt="info-image">
+                        <picture>
+                            <source type="image/webp" srcset="images/mac-screen.webp">
+                            <img class="img-fluid" src="images/mac-screen.png" alt="Wallet Desktop on Mac">
+                        </picture>
                     </div>
                 </div>
-
 
             </div>      <!-- End row -->
         </div>     <!-- End container -->
@@ -969,7 +1026,7 @@
                     <!-- FOOTER COPYRIGHT -->
                     <div class="col-md-12">
                         <div class="footer-copyright">
-                            <p class="p-sm">&copy; 2019 NextApp. All Rights Reserved</p>
+                            <p class="p-sm">&copy; 2020 Burst Apps Team. All Rights Reserved</p>
                         </div>
                     </div>
 
@@ -997,13 +1054,9 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/wow.js"></script>
 
-<!-- Custom Script -->
+<!-- Custom Scripts -->
 <script src="js/github.js"></script>
 <script src="js/custom.js"></script>
-
-<script>
-  new WOW().init();
-</script>
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
 <!-- [if lt IE 9]>

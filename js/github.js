@@ -22,16 +22,16 @@ const GraphQL = (gql) => {
 }
 
 const getReleases = async () =>
-  new Promise(resolve => {
+  new Promise((resolve, reject) => {
     $.ajax({
       ...DefaultAjaxOptions,
       url: 'https://api.github.com/repos/burst-apps-team/phoenix/releases',
     })
       .done(resolve)
-      .fail(() => resolve(DefaultDownloadValue))
+      .fail(reject)
   })
 
-const getRepoStatsCount = async () => new Promise((resolve) => {
+const getRepoStatsCount = async () => new Promise((resolve, reject) => {
   $.ajax(GraphQL(`query {
     repository(owner:"burst-apps-team", name:"phoenix") {
       pullRequests {
@@ -49,7 +49,7 @@ const getRepoStatsCount = async () => new Promise((resolve) => {
         stars: data.repository.stargazers.totalCount
       })
     })
-    .fail(() => resolve(DefaultStatsValues))
+    .fail(reject)
 })
 
 
@@ -72,8 +72,13 @@ const calcDownloadCount = releases => {
   return Promise.resolve(downloadCount)
 };
 
+
 const insertDownloadCountInHtml = downloadCount => {
   $('#download-count').text(downloadCount)
+};
+
+const insertLatestVersionInHtml = releaseName => {
+  $('#latest-release').text(`Latest release: ${releaseName}`)
 };
 
 const insertRepoStatsInHtml = ({pulls, stars}) => {
@@ -86,7 +91,14 @@ const blurNumber = n => Math.round(n / 50) * 50 - 50
 insertDownloadCountInHtml(DefaultDownloadValue)
 insertRepoStatsInHtml(DefaultStatsValues)
 
+const printLatestVersion = releases => {
+  const latestVersion = releases[0].tag_name.replace('desktop-', '')
+  insertLatestVersionInHtml(latestVersion)
+  return Promise.resolve(releases)
+}
+
 getReleases()
+  .then(printLatestVersion)
   .then(calcDownloadCount)
   .then(count => Promise.resolve(blurNumber(count)))
   .then(insertDownloadCountInHtml)
