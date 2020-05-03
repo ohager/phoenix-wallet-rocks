@@ -1,3 +1,6 @@
+const AppStoresDownloadOffset = 1500;
+const DefaultValue = 8000;
+
 const getReleases = async () =>
   new Promise((resolve, reject) => {
     $.ajax({
@@ -7,14 +10,11 @@ const getReleases = async () =>
       dataType: "json",
       url: 'https://api.github.com/repos/burst-apps-team/phoenix/releases',
     })
-      .done((data) => {
-        console.log(data)
-        resolve(data)
-      })
-      .fail(reject)
+      .done(resolve)
+      .fail(() => resolve(DefaultValue))
   })
 
-function calcDownloadCount(releases) {
+const calcDownloadCount = releases => {
 
   const executablesFilter = ({name}) => name.endsWith('.exe')
     || name.endsWith('.deb')
@@ -25,22 +25,24 @@ function calcDownloadCount(releases) {
     || name.endsWith('.dmg')
 
   let assetList = []
-  releases.forEach( ({assets}) => {
+  releases.forEach(({assets}) => {
     assetList.push(...assets.filter(executablesFilter))
-  } )
-  const downloadCount = assetList.reduce( (acc, {download_count}) => (acc + download_count), 0);
+  })
+  const downloadCount = assetList.reduce((acc, {download_count}) => (acc + download_count), AppStoresDownloadOffset);
 
   return Promise.resolve(downloadCount)
-}
+};
 
-function insertDownloadcountInHtml(downloadCount) {
+const insertDownloadCountInHtml = downloadCount => {
+  console.log('download count', downloadCount)
   $('#download-count').text(downloadCount)
-}
+};
 
+const blurNumber = n => Promise.resolve(Math.round(n / 50) * 50)
 
+insertDownloadCountInHtml(DefaultValue)
 
-(()=>{
-  getReleases()
-    .then(calcDownloadCount)
-    .then(insertDownloadcountInHtml)
-})()
+getReleases()
+  .then(calcDownloadCount)
+  .then(blurNumber)
+  .then(insertDownloadCountInHtml)
