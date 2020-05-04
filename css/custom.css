@@ -729,6 +729,7 @@ body {
 .bg-graph {
     background-image: url(../images/bg-graph.jpg);
     background-position: bottom center;
+    background-size: cover;
 }
 
 /*------------------------------------------*/
