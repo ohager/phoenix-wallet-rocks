@@ -10,6 +10,9 @@
 html {
     -webkit-font-smoothing: antialiased;
     font-size: 16px;
+    /* ff customizing */
+    scrollbar-color: var(--color-phoenix-lightgrey) transparent;
+    scrollbar-width: thin;
 }
 
 body {
@@ -17,6 +20,21 @@ body {
     color: var(--color-phoenix-lightgrey);
     font-weight: 300;
     background-color: var(--color-phoenix-darkblue);
+    overflow-y: scroll;
+}
+
+html::-webkit-scrollbar {
+    width: 4px;
+    background-color: transparent;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--color-phoenix-lightgrey);
+    border-radius: 2px;
 }
 
 /*------------------------------------------------------------------*/
