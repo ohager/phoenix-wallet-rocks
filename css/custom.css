@@ -960,7 +960,6 @@ a {
 
 a:hover {
     color: var(--color-phoenix-lightgrey);
-    font-weight: bold;
     text-decoration: none;
 }
 
@@ -5678,4 +5677,8 @@ nav a#pull {
 
 #info-8 * {
   color: #012341;
+}
+
+#latest-release:hover {
+    font-weight: bold;
 }
