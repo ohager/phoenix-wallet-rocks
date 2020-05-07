@@ -5679,6 +5679,6 @@ nav a#pull {
   color: #012341;
 }
 
-#latest-release:hover {
-    font-weight: bold;
+#latest-release > small:hover {
+    text-decoration: underline;
 }

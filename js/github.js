@@ -78,7 +78,8 @@ const insertDownloadCountInHtml = downloadCount => {
 };
 
 const insertLatestVersionInHtml = latestVersion => {
-  $('#latest-release').text(`Latest release: ${latestVersion}`)
+  $('#latest-release > p').text(`Latest release: ${latestVersion}`)
+  $('#latest-release').attr('hidden', null)
 };
 
 const insertLatestVersionDownloadLinksInHtml = latestVersion => {
