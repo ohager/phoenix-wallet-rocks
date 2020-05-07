@@ -77,8 +77,18 @@ const insertDownloadCountInHtml = downloadCount => {
   $('#download-count').text(downloadCount)
 };
 
-const insertLatestVersionInHtml = releaseName => {
-  $('#latest-release').text(`Latest release: ${releaseName}`)
+const insertLatestVersionInHtml = latestVersion => {
+  $('#latest-release').text(`Latest release: ${latestVersion}`)
+};
+
+const insertLatestVersionDownloadLinksInHtml = latestVersion => {
+  const baseUrl = 'https://github.com/burst-apps-team/phoenix/releases/latest/download'
+  const winUrl = `${baseUrl}/win-phoenix-burst-wallet-setup.${latestVersion}.exe`
+  const macUrl = `${baseUrl}/mac-phoenix-burst-wallet.${latestVersion}.dmg`
+  const linuxUrl = `${baseUrl}/linux-phoenix-burst-wallet.${latestVersion}.deb`
+  $('#download-win').attr('href', winUrl).removeClass('disabled')
+  $('#download-mac').attr('href', macUrl).removeClass('disabled')
+  $('#download-linux').attr('href', linuxUrl).removeClass('disabled')
 };
 
 const insertRepoStatsInHtml = ({pulls, stars}) => {
@@ -91,9 +101,11 @@ const blurNumber = n => Math.round(n / 50) * 50 - 50
 insertDownloadCountInHtml(DefaultDownloadValue)
 insertRepoStatsInHtml(DefaultStatsValues)
 
+
 const printLatestVersion = releases => {
   const latestVersion = releases[0].tag_name.replace('desktop-', '')
   insertLatestVersionInHtml(latestVersion)
+  insertLatestVersionDownloadLinksInHtml(latestVersion)
   return Promise.resolve(releases)
 }
 
