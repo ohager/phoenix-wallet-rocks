@@ -83,7 +83,7 @@ const insertLatestVersionInHtml = latestVersion => {
 };
 
 const insertLatestVersionDownloadLinksInHtml = latestVersion => {
-  const baseUrl = 'https://github.com/burst-apps-team/phoenix/releases/latest/download'
+  const baseUrl = `https://github.com/burst-apps-team/phoenix/releases/download/desktop-${latestVersion}`
   const winUrl = `${baseUrl}/win-phoenix-burst-wallet-setup.${latestVersion}.exe`
   const macUrl = `${baseUrl}/mac-phoenix-burst-wallet.${latestVersion}.dmg`
   const linuxUrl = `${baseUrl}/linux-phoenix-burst-wallet.${latestVersion}.deb`
@@ -110,7 +110,10 @@ const printLatestVersion = releases => {
   return Promise.resolve(releases)
 }
 
+const filterDesktopVersion = releases => releases.filter( ({tag_name}) => tag_name.indexOf('desktop-') !== -1 )
+
 getReleases()
+  .then(filterDesktopVersion)
   .then(printLatestVersion)
   .then(calcDownloadCount)
   .then(count => Promise.resolve(blurNumber(count)))
