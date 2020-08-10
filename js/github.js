@@ -79,6 +79,7 @@ const insertDownloadCountInHtml = downloadCount => {
 
 const insertLatestVersionInHtml = latestVersion => {
   $('#latest-release > p').text(`Latest release: ${latestVersion}`)
+  $('#latest-release a').attr('href', `https://github.com/burst-apps-team/phoenix/releases/tag/desktop-${latestVersion}`)
   $('#latest-release').attr('hidden', null)
 };
 
