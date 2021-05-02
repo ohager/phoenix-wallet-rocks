@@ -141,6 +141,8 @@ $(document).ready(function () {
     }, {accX: 0, accY: 0});
   });
 
+  $('#rights-notice').text(`© ${new Date().getFullYear()} Burst Apps Team. All Rights Reserved`)
+
 });
 
 new WOW().init();
