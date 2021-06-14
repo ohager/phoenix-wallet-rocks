@@ -85,9 +85,9 @@ const insertLatestVersionInHtml = latestVersion => {
 
 const insertLatestVersionDownloadLinksInHtml = latestVersion => {
   const baseUrl = `https://github.com/burst-apps-team/phoenix/releases/download/desktop-${latestVersion}`
-  const winUrl = `${baseUrl}/win-phoenix-burst-wallet-setup.${latestVersion}.exe`
-  const macUrl = `${baseUrl}/mac-phoenix-burst-wallet.${latestVersion}.dmg`
-  const linuxUrl = `${baseUrl}/linux-phoenix-burst-wallet.${latestVersion}.deb`
+  const winUrl = `${baseUrl}/win-phoenix-signum-wallet-setup.${latestVersion}.exe`
+  const macUrl = `${baseUrl}/mac-phoenix-signum-wallet.${latestVersion}.dmg`
+  const linuxUrl = `${baseUrl}/linux-phoenix-signum-wallet.${latestVersion}.deb`
   $('#download-win').attr('href', winUrl).removeClass('disabled')
   $('#download-mac').attr('href', macUrl).removeClass('disabled')
   $('#download-linux').attr('href', linuxUrl).removeClass('disabled')
