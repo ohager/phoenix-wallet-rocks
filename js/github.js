@@ -25,7 +25,7 @@ const getReleases = async () =>
   new Promise((resolve, reject) => {
     $.ajax({
       ...DefaultAjaxOptions,
-      url: 'https://api.github.com/repos/burst-apps-team/phoenix/releases',
+      url: 'https://api.github.com/repos/signum-network/phoenix/releases',
     })
       .done(resolve)
       .fail(reject)
@@ -33,7 +33,7 @@ const getReleases = async () =>
 
 const getRepoStatsCount = async () => new Promise((resolve, reject) => {
   $.ajax(GraphQL(`query {
-    repository(owner:"burst-apps-team", name:"phoenix") {
+    repository(owner:"signum-network", name:"phoenix") {
       pullRequests {
         totalCount
       }
@@ -79,12 +79,12 @@ const insertDownloadCountInHtml = downloadCount => {
 
 const insertLatestVersionInHtml = latestVersion => {
   $('#latest-release > p').text(`Latest release: ${latestVersion}`)
-  $('#latest-release a').attr('href', `https://github.com/burst-apps-team/phoenix/releases/tag/desktop-${latestVersion}`)
+  $('#latest-release a').attr('href', `https://github.com/signum-network/phoenix/releases/tag/desktop-${latestVersion}`)
   $('#latest-release').attr('hidden', null)
 };
 
 const insertLatestVersionDownloadLinksInHtml = latestVersion => {
-  const baseUrl = `https://github.com/burst-apps-team/phoenix/releases/download/desktop-${latestVersion}`
+  const baseUrl = `https://github.com/signum-network/phoenix/releases/download/desktop-${latestVersion}`
   const winUrl = `${baseUrl}/win-phoenix-signum-wallet-setup.${latestVersion}.exe`
   const macUrl = `${baseUrl}/mac-phoenix-signum-wallet.${latestVersion}.dmg`
   const linuxUrl = `${baseUrl}/linux-phoenix-signum-wallet.${latestVersion}.deb`
