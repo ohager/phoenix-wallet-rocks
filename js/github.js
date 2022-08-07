@@ -85,7 +85,7 @@ const insertLatestVersionInHtml = latestVersion => {
 
 const insertLatestVersionDownloadLinksInHtml = latestVersion => {
   const baseUrl = `https://github.com/signum-network/phoenix/releases/download/desktop-${latestVersion}`
-  const winUrl = `${baseUrl}/win-phoenix-signum-wallet-setup-signed.${latestVersion}.exe`
+  const winUrl = `${baseUrl}/win-phoenix-signum-wallet-setup.${latestVersion}.exe`
   const macUrl = `${baseUrl}/mac-phoenix-signum-wallet.${latestVersion}.dmg`
   const linuxUrl = `${baseUrl}/linux-phoenix-signum-wallet.${latestVersion}.deb`
   $('#download-win').attr('href', winUrl).removeClass('disabled')
